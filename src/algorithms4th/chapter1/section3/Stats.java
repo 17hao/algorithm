@@ -1,4 +1,4 @@
-package algorithms4th.chapter1;
+package algorithms4th.chapter1.section3;
 
 import edu.princeton.cs.algs4.Bag;
 import edu.princeton.cs.algs4.StdIn;
