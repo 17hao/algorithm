@@ -9,7 +9,7 @@ public class Queue<Item> implements Iterable<Item> {
     // 用链表实现的队列
     // page96
     // 维护一个头和尾，分别用于出队列和入队列
-    private Node<Item> first; // 队列头
+    private Node<Item> first; // first还只是一个指针指向队列头，还不是一个完整的节点
     private Node<Item> last; // 队列尾
     private int N; // 队列大小
 
