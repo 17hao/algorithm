@@ -1,5 +1,7 @@
 package algorithms4th.chapter3;
 
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Objects;
 
 public class Person {
@@ -31,5 +33,15 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, info);
+    }
+
+    public static void main(String[] args) {
+        Person a = new Person("sqh", 22);
+        Person b = new Person("lyj", 22);
+        Person c = new Person("sqh", 22);
+        Person d = a;
+        StdOut.println(a == c);
+        StdOut.println(a == d);
+        StdOut.println(a.equals(c));
     }
 }
