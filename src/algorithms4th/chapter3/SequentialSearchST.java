@@ -39,7 +39,7 @@ public class SequentialSearchST<Key, Value> {
 			throw new IllegalArgumentException("argument to get() is null");
 		for (Node xNode = first; xNode != null; xNode = xNode.next) {
 			if (key.equals(xNode.key))
-				return key;
+				return xNode.value;
 		}
 		return null;
 	}
@@ -50,6 +50,44 @@ public class SequentialSearchST<Key, Value> {
 			throw new IllegalArgumentException("argument to contains() is null");
 		return get(key) != null;
 	}
-	
-	
+
+	// 插入key-value pair
+	public void put(Key key, Value value) {
+		if(key == null) throw new IllegalArgumentException("argument to put() is null");
+		if(value == null) {
+			delete(key);
+			return;
+		}
+		for(Node xNode = first;xNode!=null;xNode = xNode.next) {
+			if(key.equals(xNode.key)) { //如果命中，更新value
+				xNode.value = value;
+				return;
+			}
+		}
+		first = new Node(key, value, first); //如果未命中，添加key-value pair
+		n++;
+	}
+
+	// 删除
+	public void delete(Key key) {
+		if(key == null) throw new IllegalArgumentException("argument to delete() is null");
+		first = delete(first,key);
+	}
+
+	private Node delete(Node node, Key key) {
+		if (key == null)
+			return null;
+		if (key.equals(node.key)) {
+			n--;
+			return node.next;
+		}
+		node.next = delete(node.next, key);
+		return node;
+	}
+
+	public static void main(String[] args) {
+		SequentialSearchST<String,Integer> st = new SequentialSearchST<String,Integer>();
+		st.put("one", 1);
+		System.out.println(st);
+	}
 }
