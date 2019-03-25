@@ -11,7 +11,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 	private Key[] keys;
 	private Value[] values;
 	private int N = 0;
-	
+
 	public BinarySearchST() {
 		this(INIT_CAPACITY);
 	}
@@ -21,8 +21,24 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 		keys = (Key[]) new Comparable[initCapacity];
 		values = (Value[]) new Object[initCapacity];
 	}
-	
-	public int siz(){
+
+	public int siz() {
 		return N;
+	}
+
+	public int rank(Key key) {
+		int lo = 0;
+		int hi = N - 1;
+		while (lo <= hi) {
+			int mid = (hi - lo) / 2;
+			if (key.compareTo(keys[mid]) < 0) {
+				hi = mid - 1;
+			} else if (key.compareTo(keys[mid]) > 0) {
+				lo = mid + 1;
+			} else {
+				return mid;
+			}
+		}
+		return lo;
 	}
 }
