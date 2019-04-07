@@ -1,5 +1,7 @@
 package leetcode;
 
+import tool.LinkedListTool;
+
 /**
  * 对链表进行插入排序
  *
@@ -8,7 +10,7 @@ package leetcode;
  * @since 2018/12/18
  */
 public class Code_147_InsertionSortList {
-    static ListNode insertLinkedList(ListNode head) {
+    private static ListNode insertLinkedList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -33,19 +35,11 @@ public class Code_147_InsertionSortList {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 2, 4};
-        //int[] arr = {4, 3, 2, 5, 6, 7, 1, 0};
+        //int[] arr = {3, 2, 4};
+        int[] arr = {4, 3, 2, 5, 6, 7, 1, 0};
         //int[] arr = {-1, 5, 3, 4, 0};
-        ListNode dummyHead = new ListNode(Integer.MIN_VALUE);
-        ListNode cur = dummyHead;
-        for (int value : arr) {
-            cur.next = new ListNode(value);
-            cur = cur.next;
-        }
-        ListNode realHead = insertLinkedList(dummyHead.next);
-        while (realHead != null) {
-            System.out.print(realHead.val + "->");
-            realHead = realHead.next;
-        }
+        ListNode head = LinkedListTool.generateList(arr); //返回了哨兵节点
+        ListNode currentHead = insertLinkedList(head);  //经操作后真正的头结点
+        LinkedListTool.printList(currentHead);
     }
 }
