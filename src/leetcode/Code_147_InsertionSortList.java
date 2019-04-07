@@ -1,6 +1,8 @@
 package leetcode;
 
+import tool.CommonTool;
 import tool.LinkedListTool;
+import tool.ListNode;
 
 /**
  * 对链表进行插入排序
@@ -35,9 +37,7 @@ public class Code_147_InsertionSortList {
     }
 
     public static void main(String[] args) {
-        //int[] arr = {3, 2, 4};
-        int[] arr = {4, 3, 2, 5, 6, 7, 1, 0};
-        //int[] arr = {-1, 5, 3, 4, 0};
+        int[] arr = CommonTool.generateArray(10, 3);
         ListNode head = LinkedListTool.generateList(arr); //返回了哨兵节点
         ListNode currentHead = insertLinkedList(head);  //经操作后真正的头结点
         LinkedListTool.printList(currentHead);

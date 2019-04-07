@@ -1,7 +1,5 @@
 package tool;
 
-import leetcode.ListNode;
-
 /**
  * @author 17hao
  * @since 2019/4/7

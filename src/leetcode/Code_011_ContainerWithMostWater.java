@@ -1,6 +1,8 @@
 package leetcode;
 
-public class Code_011_Container_With_Most_Water {
+import tool.CommonTool;
+
+public class Code_011_ContainerWithMostWater {
     /*
     public static int maxArea(int[] height) {
         int[] arr = new int[height.length * (height.length - 1) / 2];
@@ -90,7 +92,7 @@ public class Code_011_Container_With_Most_Water {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,34,5,6,7,8};
+        int[] arr = CommonTool.generatePositiveArray(10, 10);
         int area = maxArea(arr);
         System.out.print(area);
     }

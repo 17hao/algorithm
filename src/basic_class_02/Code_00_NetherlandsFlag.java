@@ -1,7 +1,6 @@
 package basic_class_02;
 
-import tool.CommonTool;
-import tool.SortTestTool;
+import static tool.CommonTool.*;
 
 public class Code_00_NetherlandsFlag {
     /*
@@ -19,11 +18,11 @@ public class Code_00_NetherlandsFlag {
         int cur = 0;//当前指针
         while (cur < big) {
             if (arr[cur] < num) {
-                CommonTool.swap(arr, ++small, cur++);
+                swap(arr, ++small, cur++);
             } else if (arr[cur] == num) {
                 cur++;
             } else if (arr[cur] > num) {
-                CommonTool.swap(arr, --big, cur);
+                swap(arr, --big, cur);
             }
         }
         return new int[]{small + 1, big};
@@ -37,14 +36,14 @@ public class Code_00_NetherlandsFlag {
         int big = r;
         while (l < big) {
             if (arr[l] < arr[r]) {//左指针对应的数和最右边的数比较
-                CommonTool.swap(arr, ++small, l++);
+                swap(arr, ++small, l++);
             } else if (arr[l] == arr[r]) {
                 l++;
             } else if (arr[l] > arr[r]) {
-                CommonTool.swap(arr, --big, l);
+                swap(arr, --big, l);
             }
         }
-        CommonTool.swap(arr, big, r);
+        swap(arr, big, r);
         return new int[]{small + 1, big};//最后一个数x和>x区域最左边的一个数交换后big指向=x区域最右边
     }
     */
@@ -57,9 +56,9 @@ public class Code_00_NetherlandsFlag {
         int cur = 0;
         while (cur < big) {
             if (arr[cur] < num) {
-                CommonTool.swap(arr, ++small, cur++);
+                swap(arr, ++small, cur++);
             } else if (arr[cur] > num) {
-                CommonTool.swap(arr, --big, cur);
+                swap(arr, --big, cur);
             } else {
                 cur++;
             }
@@ -75,28 +74,25 @@ public class Code_00_NetherlandsFlag {
         int small = l - 1;
         int big = r;
         int seed = l + (int) (Math.random() * (r - l + 1));
-        System.out.print("\n"+"arr[" + seed + "]:" + arr[seed] + "\n");
-        CommonTool.swap(arr, seed, r);//随机选择数组中的一个数和最后一个数交换
+        System.out.print("\n" + "arr[" + seed + "]:" + arr[seed] + "\n");
+        swap(arr, seed, r);//随机选择数组中的一个数和最后一个数交换
         while (l < big) {
             if (arr[l] < arr[r]) {//和最后一个数作比较,因为最后一个数已经被置换成基准数了
-                CommonTool.swap(arr, ++small, l++);
+                swap(arr, ++small, l++);
             } else if (arr[l] > arr[r]) {
-                CommonTool.swap(arr, --big, l);
+                swap(arr, --big, l);
             } else {
                 l++;
             }
         }
-        CommonTool.swap(arr, big, r);
+        swap(arr, big, r);
         return new int[]{small + 1, big};
     }
 
     public static void main(String[] args) {
-        int[] arr1 = SortTestTool.generateArray(20, 10);
-        CommonTool.printArray(arr1);
-//        int seed = (int) (Math.random() * arr1.length);
-//        System.out.print("arr[" + seed + "]:" + arr1[seed] + "\n");
+        int[] arr1 = generateArray(20, 10);
         int[] tmp = partition(arr1, 0, arr1.length - 1);
-        CommonTool.printArray(arr1);
-        System.out.print("\n"+tmp[0] + " " + tmp[1]);
+        printArray(arr1);
+        System.out.print("\n" + tmp[0] + " " + tmp[1]);
     }
 }

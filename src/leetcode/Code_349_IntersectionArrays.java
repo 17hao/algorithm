@@ -1,5 +1,7 @@
 package leetcode;
 
+import tool.CommonTool;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
  * @author sqh
  * @date 2018/12/18
  */
-public class Code_349_Intersection_Arrays {
+public class Code_349_IntersectionArrays {
 	public static int[] intersection(int[] nums1, int[] nums2) {
 		HashSet<Integer> set = new HashSet<Integer>();
 		// nums1去除重复元素
@@ -33,11 +35,9 @@ public class Code_349_Intersection_Arrays {
 	}
 
 	public static void main(String[] args) {
-		int[] arr1 = { 1, 2, 3, 4, 4 };
-		int[] arr2 = { 4, 4, 5, 6, 7 };
+		int[] arr1 = CommonTool.generateArray(10, 3);
+		int[] arr2 = CommonTool.generateArray(10, 3);
 		int[] res = intersection(arr1, arr2);
-		for (int i = 0; i < res.length; i++) {
-			System.out.print(res[i] + " ");
-		}
+		CommonTool.printArray(res);
 	}
 }

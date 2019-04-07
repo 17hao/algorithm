@@ -4,7 +4,7 @@ package basic_class_03;
  * 用数组实现栈和队列
  *
  * @author sqh
- * @date 2018/12/19
+ * @since 2018/12/19
  */
 public class Code_01_Array_To_Stack_Queue {
 	public static class ArrayStack {

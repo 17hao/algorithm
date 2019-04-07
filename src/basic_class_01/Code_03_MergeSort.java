@@ -1,5 +1,6 @@
 package basic_class_01;
 
+import tool.CommonTool;
 import tool.SortTestTool;
 
 public class Code_03_MergeSort {
@@ -51,7 +52,7 @@ public class Code_03_MergeSort {
         int maxValue = 100;
         int timeSize = 5000;
         boolean success = true;
-        int[] arr1 = SortTestTool.generateArray(maxSize, maxValue);
+        int[] arr1 = CommonTool.generateArray(maxSize, maxValue);
         int[] arr2 = SortTestTool.copyArray(arr1);
         for (int i = 0; i < timeSize; i++) {
             mergeSort(arr1, 0, arr1.length - 1);

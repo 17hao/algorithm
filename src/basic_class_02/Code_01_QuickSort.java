@@ -1,7 +1,8 @@
 package basic_class_02;
 
-import tool.CommonTool;
 import tool.SortTestTool;
+
+import static tool.CommonTool.*;
 
 @SuppressWarnings("all")
 public class Code_01_QuickSort {
@@ -29,14 +30,14 @@ public class Code_01_QuickSort {
         int big = r;//经典快排将最后一个数作为基准点,可以直接包含到大于区域
         while (l < big) {
             if (arr[l] < arr[r]) {
-                CommonTool.swap(arr, ++small, l++);
+                swap(arr, ++small, l++);
             } else if (arr[l] == arr[r]) {
                 l++;
             } else if (arr[l] > arr[r]) {
-                CommonTool.swap(arr, --big, l);
+                swap(arr, --big, l);
             }
         }
-        CommonTool.swap(arr, big, r);//一开始将最后一个数包进了大于区域 要将它置换出来
+        swap(arr, big, r);//一开始将最后一个数包进了大于区域 要将它置换出来
         return new int[]{small + 1, big};//返回==基准数的一片区域的左右边界
     }
     */
@@ -61,31 +62,31 @@ public class Code_01_QuickSort {
         int small = left - 1;
         int big = right;
         int seed = left + (int) (Math.random() * (right - left + 1));
-        CommonTool.swap(arr, seed, right);
+        swap(arr, seed, right);
         while (left < big) {
             if (arr[left] < arr[right]) {
-                CommonTool.swap(arr, ++small, left++);
+                swap(arr, ++small, left++);
             } else if (arr[left] > arr[right]) {
-                CommonTool.swap(arr, --big, left);
+                swap(arr, --big, left);
             } else {
                 left++;
             }
         }
-        CommonTool.swap(arr, big, right);
+        swap(arr, big, right);
         return new int[]{small + 1, big};
     }
 
     public static void main(String[] args) {
         int timeSize = 1000;
         boolean success = true;
-        int[] arr1 = SortTestTool.generateArray(20, 100);
+        int[] arr1 = generateArray(20, 100);
         int[] arr2 = SortTestTool.copyArray(arr1);
         for (int i = 0; i < timeSize; i++) {
             quickSort(arr1, 0, arr1.length - 1);
             SortTestTool.comparator(arr2);
             if (!SortTestTool.isEqual(arr1, arr2)) {
                 success = false;
-                CommonTool.printArray(arr1);
+                printArray(arr1);
                 break;
             }
         }

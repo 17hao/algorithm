@@ -1,6 +1,8 @@
 package leetcode;
 
-public class Code_035_Search_Insert_Position {
+import tool.CommonTool;
+
+public class Code_035_SearchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
         int index = -1;
         for (int i = 0; i < nums.length; i++) {
@@ -32,7 +34,7 @@ public class Code_035_Search_Insert_Position {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 6};
+        int[] arr = CommonTool.generatePositiveArray(10, 3);
         int index = searchInsert(arr, 2);
         System.out.print(index);
     }

@@ -1,7 +1,8 @@
 package basic_class_02;
 
-import tool.CommonTool;
 import tool.SortTestTool;
+
+import static tool.CommonTool.*;
 
 /*
 堆排序
@@ -19,17 +20,17 @@ public class Code_02_HeapSort {
             heapInsert(arr, i);
         }
         int size = arr.length;
-        CommonTool.swap(arr, 0, --size);//等价于size=arr.length-1; swap(arr,0,size)
+        swap(arr, 0, --size);//等价于size=arr.length-1; swap(arr,0,size)
         while (size > 0) {
             heapify(arr, 0, size);
-            CommonTool.swap(arr, 0, --size);
+            swap(arr, 0, --size);
         }
     }
 
     //把数组中的数放到合适的位置,遍历整个数组后形成大根堆
     public static void heapInsert(int[] arr, int index) {
         while (arr[index] > arr[(index - 1) / 2]) {
-            CommonTool.swap(arr, index, (index - 1) / 2);
+            swap(arr, index, (index - 1) / 2);
             index = (index - 1) / 2;
         }
     }
@@ -44,7 +45,7 @@ public class Code_02_HeapSort {
             if (biggest == index) {
                 break;
             }
-            CommonTool.swap(arr, index, biggest);
+            swap(arr, index, biggest);
             index = biggest;//被交换的较小的那个数来到biggest位置
             left = index * 2 + 1;
         }
@@ -52,7 +53,7 @@ public class Code_02_HeapSort {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = SortTestTool.generateArray(10, 100);
+        int[] arr1 = generateArray(10, 100);
         int[] arr2 = SortTestTool.copyArray(arr1);
         boolean success = true;
         for (int i = 0; i < 100; i++) {
@@ -60,7 +61,7 @@ public class Code_02_HeapSort {
             SortTestTool.comparator(arr2);
             if (!SortTestTool.isEqual(arr1, arr2)) {
                 success = false;
-                CommonTool.printArray(arr1);
+                printArray(arr1);
                 break;
             }
         }

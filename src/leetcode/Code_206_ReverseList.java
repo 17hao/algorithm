@@ -1,6 +1,8 @@
 package leetcode;
 
+import tool.CommonTool;
 import tool.LinkedListTool;
+import tool.ListNode;
 
 /**
  * @author 17hao
@@ -23,8 +25,7 @@ public class Code_206_ReverseList {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        //int[] arr = {};
+        int[] arr = CommonTool.generateArray(10, 3);
         ListNode head = LinkedListTool.generateList(arr);
         ListNode currentHead = reverseList(head);
         LinkedListTool.printList(currentHead);

@@ -8,7 +8,7 @@ import java.util.Stack;
  * 栈和队列的转换
  *
  * @author sqh
- * @date 2018/12/19
+ * @since 2018/12/19
  */
 public class Code_02_StackAndQueueConvert {
 	// 2个栈实现队列

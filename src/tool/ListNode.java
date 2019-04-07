@@ -1,4 +1,4 @@
-package leetcode;
+package tool;
 
 /**
  * @author 17hao

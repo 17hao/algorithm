@@ -1,6 +1,6 @@
 package leetcode;
 
-public class Code_026_Remove_Duplicates {
+public class Code_026_RemoveDuplicates {
     public static int removeDuplicates(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
