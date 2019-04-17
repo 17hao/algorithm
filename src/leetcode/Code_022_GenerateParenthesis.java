@@ -8,9 +8,8 @@ import java.util.List;
  * @date 2019-04-14 18:51
  */
 public class Code_022_GenerateParenthesis {
-    //todo 这么简单的题还没理解。。。我操
     public static void main(String[] args) {
-        int n = 2;
+        int n = 3;
         List res = generateParenthesis(n);
         System.out.println(res);
     }
@@ -21,6 +20,7 @@ public class Code_022_GenerateParenthesis {
         return list;
     }
 
+    /* 每次调用会完整的保留整个函数的所有内容，包括形参、局部变量、返回值等 */
     private static void helper(List<String> list, String tmp, int left, int right, int n) {
         if (right == n) {
             list.add(tmp);
@@ -30,6 +30,7 @@ public class Code_022_GenerateParenthesis {
             helper(list, tmp + "(", left + 1, right, n);
         }
         if (right < left) {
+
             helper(list, tmp + ")", left, right + 1, n);
         }
     }
