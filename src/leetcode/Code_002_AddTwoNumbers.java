@@ -11,7 +11,7 @@ import java.util.LinkedList;
  */
 public class Code_002_AddTwoNumbers {
     //todo big integer unsolved
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // int num1 = listToNum(l1);
         // int num2 = listToNum(l2);
         // int res = num1 + num2;

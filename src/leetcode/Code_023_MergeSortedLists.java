@@ -12,16 +12,14 @@ public class Code_023_MergeSortedLists {
         ListNode dummyHead = new ListNode(Integer.MIN_VALUE);
         ListNode cur = dummyHead;
         while (l1 != null && l2 != null) {
-            {
-                if (l1.val < l2.val) {
-                    cur.next = l1;
-                    l1 = l1.next;
-                    cur = cur.next;
-                } else {
-                    cur.next = l2;
-                    l2 = l2.next;
-                    cur = cur.next;
-                }
+            if (l1.val < l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+                cur = cur.next;
+            } else {
+                cur.next = l2;
+                l2 = l2.next;
+                cur = cur.next;
             }
         }
         if (l1 == null) {

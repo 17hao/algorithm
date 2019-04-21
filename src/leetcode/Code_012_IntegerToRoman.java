@@ -11,17 +11,17 @@ import java.util.Scanner;
 public class Code_012_IntegerToRoman {
     private static Scanner scanner;
 
-    public static String intToRoman(int num) {
-        String res = new String();
+    private static String intToRoman(int num) {
+        StringBuilder res = new StringBuilder();
         int[] values = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
         String[] reps = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
         for (int i = 12; i >= 0; i--) {
             while (num >= values[i]) {
                 num -= values[i];
-                res += reps[i];
+                res.append(reps[i]);
             }
         }
-        return res;
+        return res.toString();
     }
 
     public static void main(String[] args) {

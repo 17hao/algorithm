@@ -76,7 +76,7 @@ public class Code_011_ContainerWithMostWater {
     */
 
     //双指针法,时间复杂度O(n)
-    public static int maxArea(int[] height) {
+    private static int maxArea(int[] height) {
         int left = 0;
         int right = height.length - 1;
         int max = 0;
