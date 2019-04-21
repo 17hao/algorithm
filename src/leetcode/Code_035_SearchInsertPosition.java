@@ -3,7 +3,7 @@ package leetcode;
 import tool.CommonTool;
 
 public class Code_035_SearchInsertPosition {
-    public static int searchInsert(int[] nums, int target) {
+    private static int searchInsert(int[] nums, int target) {
         int index = -1;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == target) {

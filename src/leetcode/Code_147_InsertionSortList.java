@@ -8,8 +8,8 @@ import tool.ListNode;
  * 对链表进行插入排序
  *
  * @author sqh
- * @finish 2019/4/7
- * @since 2018/12/18
+ * @date 2018-12-18
+ * finished on 2019-4-7
  */
 public class Code_147_InsertionSortList {
     private static ListNode insertLinkedList(ListNode head) {

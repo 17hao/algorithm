@@ -2,7 +2,7 @@ package leetcode;
 
 /**
  * @author 17hao
- * @update 2019-4-15 23:00
+ * finished on 2019-4-15 23:00
  */
 public class Code_059_SpiralMatrixII {
     /*
@@ -14,7 +14,7 @@ public class Code_059_SpiralMatrixII {
     11,16,15,6
     10, 9, 8,7
      */
-    public static int[][] generateMatrix(int n) {
+    private static int[][] generateMatrix(int n) {
         int[][] res = new int[n][n];
         for (int i = 0; i < n; i++) {
 

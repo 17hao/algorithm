@@ -6,7 +6,7 @@ import static tool.CommonTool.*;
  * 荷兰旗问题
  *
  * @author sqh
- * @since 2018/12/18
+ * @date 2018-12-18
  */
 public class Code_075_SortColors {
     public static void sortColors(int[] num) {
