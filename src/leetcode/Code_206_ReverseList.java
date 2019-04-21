@@ -6,7 +6,7 @@ import tool.ListNode;
 
 /**
  * @author 17hao
- * @since 2019/4/7
+ * @date 2019-4-7
  */
 public class Code_206_ReverseList {
     private static ListNode reverseList(ListNode head) {

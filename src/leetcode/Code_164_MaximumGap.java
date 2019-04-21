@@ -6,10 +6,10 @@ import tool.CommonTool;
  * 排序后数组2个元素的最大间距
  *
  * @author sqh
- * @date 2018/12/18
+ * @date 2018-12-18
  */
 public class Code_164_MaximumGap {
-    public static int maximumGap(int[] nums) {
+    private static int maximumGap(int[] nums) {
         if (nums.length <= 1) {
             return 0;
         } else {
@@ -23,7 +23,7 @@ public class Code_164_MaximumGap {
         }
     }
 
-    public static void quickSort(int[] arr, int l, int r) {
+    private static void quickSort(int[] arr, int l, int r) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -48,7 +48,7 @@ public class Code_164_MaximumGap {
         }
     }
 
-    public static int[] partition(int[] arr, int left, int right) {
+    private static int[] partition(int[] arr, int left, int right) {
         int small = left - 1, big = right;
 //		int seedIndex = new Random().nextInt(right);
         int seedIndex = left + (int) (Math.random() * (right - left + 1));
