@@ -19,7 +19,7 @@ public class Code_136_SingleNumber {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3,3,4,4};
+        int[] arr = {1, 2, 2, 3, 3, 4, 4};
         int res = singleNumber(arr);
         System.out.println(res);
     }
