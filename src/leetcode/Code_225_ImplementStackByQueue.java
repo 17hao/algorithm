@@ -27,8 +27,6 @@ class MyStack {
 
     MyStack() {
         q = new LinkedList<>();
-        //todo 为什么q.size()和private int size关联起来了
-        q.size();
     }
 
     void push(int x) {
