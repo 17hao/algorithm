@@ -52,7 +52,7 @@ public class Code_347_TopKFrequent {
     private static void heapify(int[] keys, int[] values, int i, int n) {
         while (true) {
             int minPos = i;
-            if (i * 2 <= n && values[i] > values[i * 2]) minPos = i * 2;
+            if (i * 2 <= n && values[minPos] > values[i * 2]) minPos = i * 2;
             if (i * 2 + 1 <= n && values[minPos] > values[i * 2 + 1]) minPos = i * 2 + 1;
             if (minPos == i) break;
             swap(keys, minPos, i);
