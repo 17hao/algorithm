@@ -1,4 +1,4 @@
-package algorithms4th.chapter3;
+package algorithms4th.chapter_3_Searching;
 
 import edu.princeton.cs.algs4.StdOut;
 

@@ -1,4 +1,4 @@
-package algorithms4th.chapter3;
+package algorithms4th.chapter_3_Searching;
 
 /**
  * 基于数组的二分查找

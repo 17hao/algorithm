@@ -1,4 +1,4 @@
-package algorithms4th.chapter1.section1;
+package algorithms4th.chapter_1_Fundamentals.section1;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
