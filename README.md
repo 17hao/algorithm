@@ -1,2 +1,1 @@
-# 日常算法练习
-# git试验田
+# daily algorithm practice

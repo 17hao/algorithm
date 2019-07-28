@@ -1,4 +1,4 @@
-package algorithms4th.chapter1.section2;
+package algorithms4th.chapter_1_Fundamentals.section2;
 
 import edu.princeton.cs.algs4.StdOut;
 

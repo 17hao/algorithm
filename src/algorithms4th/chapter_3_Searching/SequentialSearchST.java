@@ -1,4 +1,4 @@
-package algorithms4th.chapter3;
+package algorithms4th.chapter_3_Searching;
 
 /*
  * this implementation uses a singly-linked list and sequential search
