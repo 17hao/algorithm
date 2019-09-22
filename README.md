@@ -1,1 +1,3 @@
-# daily algorithm practice
+## algorithm
+### algorithms 4th
+### leetcode solutions
