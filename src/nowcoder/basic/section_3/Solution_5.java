@@ -9,8 +9,8 @@ public class Solution_5 {
         else {
             ListNode dummy = new ListNode(Integer.MIN_VALUE);
             while (head != null) {
-                ListNode next = head.next;
                 ListNode cur = dummy;
+                ListNode next = head.next;
                 while (cur.next != null && head.val > cur.next.val) {
                     cur = cur.next;
                 }
