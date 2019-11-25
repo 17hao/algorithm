@@ -2,10 +2,10 @@ package leetcode.onece;
 
 /**
  * 找出数组中最大的子序列和
- * 状态:
+ * base case: dp[0] = nums[0];
  * 状态转移:dp[i] = MAX(dp[i - 1] + nums[i], nums[i]); result = MNAX(result, dp[i])
  *
- * @data 11-23 Saturday
+ * @since 11-23 Saturday
  */
 public class Code_053_MaxSubArray {
     static int maxSubArray(int[] nums) {

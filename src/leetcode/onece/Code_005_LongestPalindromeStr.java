@@ -2,10 +2,10 @@ package leetcode.onece;
 
 /**
  * 找出一个字符串中最长的回文字符<br>
- * 状态:
+ * base case: dp[l][r] = false
  * 状态转移方程:dp[l][r] = s.charAt(l) == s.charAt(r) && ((l + 1) >= (r - 1) || dp[l + 1][r - 1])
  *
- * @data 11-23 Saturday
+ * @since 11-23 Saturday
  */
 public class Code_005_LongestPalindromeStr {
     static String longestPalindromeStr(String s) {

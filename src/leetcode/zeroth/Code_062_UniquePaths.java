@@ -2,9 +2,10 @@ package leetcode.zeroth;
 
 /**
  * m x n的方格从左上到右下有几种走法,每次移动一格
+ * base case: dp[0][0] = 1; dp[0][1] = 1; dp[1][0] = 1;
  * 状态转移方程: dp[m][n] = dp[m - 1][n] + dp[m][n - 1]
  *
- * @data 11-24 Sunday
+ * @since 11-24 Sunday
  */
 public class Code_062_UniquePaths {
     static int uniquePaths(int m, int n) {

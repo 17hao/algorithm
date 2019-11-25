@@ -2,10 +2,10 @@ package leetcode.onece;
 
 /**
  * 爬楼梯
- * 状态:
+ * base case: dp[0] = 0; dp[1] = 1; dp[2] = 2;
  * 状态转移方程:dp[i] = dp[i - 1] + dp[i - 2]
  *
- * @data 11-23 Saturday
+ * @since 11-23 Saturday
  */
 public class Code_070_ClimbStairs {
     static int climbStairs(int n) {
