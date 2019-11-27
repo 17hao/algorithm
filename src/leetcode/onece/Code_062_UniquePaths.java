@@ -1,11 +1,11 @@
-package leetcode.zeroth;
+package leetcode.onece;
 
 /**
- * m x n的方格从左上到右下有几种走法,每次移动一格
- * base case: dp[0][0] = 1; dp[0][1] = 1; dp[1][0] = 1;
- * 状态转移方程: dp[m][n] = dp[m - 1][n] + dp[m][n - 1]
+ * m x n的方格,从左上到右下,每次走一格.最多几种走法
+ * base case: dp[0][0] = 1; dp[0][n] = n; dp[m][0] = m;
+ * 状态转移方程: dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
  *
- * @since 11-24 Sunday
+ * @since 11-27 Wednesday
  */
 public class Code_062_UniquePaths {
     static int uniquePaths(int m, int n) {
@@ -26,7 +26,7 @@ public class Code_062_UniquePaths {
     }
 
     public static void main(String[] args) {
-        System.out.println(uniquePaths(1, 1));
-        System.out.println(uniquePaths(7, 3));
+        System.out.println(uniquePaths(3, 2));
+        System.out.println(uniquePaths(7 ,3));
     }
 }
