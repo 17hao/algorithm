@@ -2,10 +2,21 @@ package leetcode.zeroth;
 
 import tool.TreeNode;
 
+/**
+ * 计算二叉树最大深度.
+ * 树深度二叉树的深度为根节点到最远叶子节点的最长路径上的节点数.
+ *
+ * @since 2019-12-3 Thursday
+ */
 public class Code_104_MaxDepthOfBinaryTree {
-    public static int maxDepth(TreeNode root) {
-        if (root == null) return 0;
-        else return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    static int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int leftDepth =  maxDepth(root.left);
+            int rightDepth = maxDepth(root.right);
+            return Math.max(++leftDepth, ++rightDepth);
+        }
     }
 
     public static void main(String[] args) {
@@ -16,7 +27,7 @@ public class Code_104_MaxDepthOfBinaryTree {
         head.left.right = new TreeNode(5);
         head.right.left = new TreeNode(6);
         head.right.right = new TreeNode(7);
-        int result = maxDepth(head);
-        System.out.println(result);
+        head.right.right.left = new TreeNode(8);
+        System.out.println(maxDepth(head));
     }
 }
