@@ -1,11 +1,10 @@
 package leetcode.twice;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- *
+ * 输入一个由2-9组成的字符串, 返回它们表示的所有字母组合.
  *
  * @since 2019-12-9 Monday
  */
