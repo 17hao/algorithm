@@ -5,7 +5,7 @@ import tool.TreeNode;
 /**
  * 翻转二叉树
  *
- * @since 2019-12-10 Thursday
+ * @since 2019-12-10 Tuesday
  */
 public class Code_226_InvertBT {
     static TreeNode invertTree(TreeNode root) {

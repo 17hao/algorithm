@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * 从前序和中序遍历中构建二叉树
  *
- * @since 2019-12-10 Thursday
+ * @since 2019-12-10 Tuesday
  */
 public class Code_105_ConstructBT {
     TreeNode buildTree(int[] preorder, int[] inorder) {
