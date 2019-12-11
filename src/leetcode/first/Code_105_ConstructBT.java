@@ -5,11 +5,11 @@ import tool.TreeNode;
 import java.util.HashMap;
 
 /**
- * 从前序遍历和中序遍历中构建二叉树
+ * 从前序遍历和中序遍历中构建二叉树(假设没重复元素)
  *
  * @since 2019-12-8 Sunday
  */
-public class Code_105_ConstructorBT {
+public class Code_105_ConstructBT {
     TreeNode buildTree(int[] preorder, int[] inorder) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {
@@ -50,7 +50,7 @@ public class Code_105_ConstructorBT {
     public static void main(String[] args) {
         int[] preorder = {3, 9, 20, 15, 7};
         int[] inorder = {9, 3, 15, 20, 7};
-        TreeNode root = new Code_105_ConstructorBT().buildTree(preorder, inorder);
+        TreeNode root = new Code_105_ConstructBT().buildTree(preorder, inorder);
         System.out.println(root.left.val + " " + root.right.val);
     }
 }
