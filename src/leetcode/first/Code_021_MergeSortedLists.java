@@ -7,7 +7,7 @@ import tool.ListNode;
  * @author 17hao
  * @date 2019-04-21 12:01
  */
-public class Code_023_MergeSortedLists {
+public class Code_021_MergeSortedLists {
     private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(Integer.MIN_VALUE);
         ListNode cur = dummyHead;
