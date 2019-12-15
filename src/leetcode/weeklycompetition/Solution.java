@@ -1,10 +1,15 @@
-package leetcode;
+package leetcode.weeklycompetition;
 
 import tool.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 167场
+ *
+ * @since 2019-12-15 Sunday
+ */
 public class Solution {
     static int getDecimalValue(ListNode head) {
         StringBuilder temp = new StringBuilder();
