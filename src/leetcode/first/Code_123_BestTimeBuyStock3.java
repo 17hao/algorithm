@@ -7,6 +7,7 @@ package leetcode.first;
  */
 public class Code_123_BestTimeBuyStock3 {
     static int maxProfit(int[] prices) {
+        if (prices.length == 0) return 0;
         int len = prices.length;
         int[][][] dp = new int[len][3][2];
         dp[0][0][0] = 0;
