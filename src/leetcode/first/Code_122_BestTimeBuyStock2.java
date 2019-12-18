@@ -11,7 +11,7 @@ package leetcode.first;
  */
 public class Code_122_BestTimeBuyStock2 {
     static int maxProfit(int[] prices) {
-        int dp_i_0 = 0, dp_i_1 = -Integer.MAX_VALUE;
+        int dp_i_0 = 0, dp_i_1 = -prices[0];
         for (int price : prices) {
             dp_i_0 = Math.max(dp_i_0, dp_i_1 + price);
             dp_i_1 = Math.max(dp_i_0 - price, dp_i_1);
@@ -24,7 +24,7 @@ public class Code_122_BestTimeBuyStock2 {
         for (int i = 0; i < prices.length; i++) {
             if (i == 0) {
                 dp[0][0] = 0;
-                dp[0][1] = -Integer.MAX_VALUE;
+                dp[0][1] = -prices[0];
             } else {
                 dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
                 dp[i][1] = Math.max(dp[i - 1][0] - prices[i], dp[i - 1][1]);
