@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 输入一个由2-9组成的字符串, 返回它们表示的所有字母组合.
  *
- * @since 11-29 Friday
+ * @since 2019-11-29 Friday
  */
 public class Code_017_LetterCombinations {
     static List<String> letterCombinations(String digits) {

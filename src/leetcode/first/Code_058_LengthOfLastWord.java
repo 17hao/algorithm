@@ -4,7 +4,7 @@ package leetcode.first;
 /**
  * 给定一个仅包含大小写字母和空格 ' ' 的字符串，返回其最后一个单词的长度。
  *
- * @since 12-3 Thursday
+ * @since 2019-12-3 Thursday
  */
 public class Code_058_LengthOfLastWord {
     static int lengthOfLastWord(String s) {

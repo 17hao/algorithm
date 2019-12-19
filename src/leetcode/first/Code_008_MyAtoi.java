@@ -3,7 +3,7 @@ package leetcode.first;
 /**
  * 将字符串转换成int
  *
- * @since 11-27 Wednesday
+ * @since 2019-11-27 Wednesday
  */
 public class Code_008_MyAtoi {
     static int myAtoi(String s) {

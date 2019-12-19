@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * 找出一个字符串中最长的不重复子字符串的长度
  *
- * @since 11-26 Thursday
+ * @since 2019-11-26 Thursday
  */
 public class Code_003_LongestSubStr {
     static int lengthOfLongestSubString(String s) {

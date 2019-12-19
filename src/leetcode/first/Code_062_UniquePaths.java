@@ -5,7 +5,7 @@ package leetcode.first;
  * base case: dp[0][0] = 1; dp[0][1] = 1; dp[1][0] = 1;
  * 状态转移方程: dp[m][n] = dp[m - 1][n] + dp[m][n - 1]
  *
- * @since 11-24 Sunday
+ * @since 2019-11-24 Sunday
  */
 public class Code_062_UniquePaths {
     static int uniquePaths(int m, int n) {

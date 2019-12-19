@@ -2,7 +2,7 @@ package leetcode.first;
 
 /**
  * 找出一个字符串中最长的回文字符串
- * @data 11-22 Friday
+ * @since  2019-11-22 Friday
  */
 public class Code_005_LongestPalindromeStr {
     static String longestPalindromeStr(String s) {
