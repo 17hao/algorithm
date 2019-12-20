@@ -12,11 +12,11 @@ public class Code_078_Subsets {
     static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         result.add(new ArrayList<>());
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
             List<List<Integer>> t = new ArrayList<>();
             for (List<Integer> l : result) {
                 List<Integer> aux = new ArrayList<>(l);
-                aux.add(nums[i]);
+                aux.add(num);
                 t.add(aux);
             }
             result.addAll(t);
