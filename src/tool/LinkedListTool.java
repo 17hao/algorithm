@@ -7,7 +7,7 @@ package tool;
 public class LinkedListTool {
     /**
      * generate a linked list by given array
-     * @param array
+     *
      * @return the head of linked list
      */
     public static ListNode generateList(int[] array) {
@@ -22,13 +22,12 @@ public class LinkedListTool {
 
     /**
      * print linked list
-     * @param head
      */
     public static void printList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + "->");
             head = head.next;
         }
-        System.out.print("null");
+        System.out.print("null\n");
     }
 }
