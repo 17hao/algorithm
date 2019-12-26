@@ -1,5 +1,10 @@
-package leetcode.first;
+package leetcode.second;
 
+/**
+ * 判断回文字符串
+ *
+ * @since 2012-12-2
+ */
 public class Code_125_ValidatePalindrome {
     static boolean isPalindrome(String s) {
         if (s.length() == 0) return true;
