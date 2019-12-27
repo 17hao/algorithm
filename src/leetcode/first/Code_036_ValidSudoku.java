@@ -17,7 +17,7 @@ public class Code_036_ValidSudoku {
             rows[i] = new HashMap<>();
             subSudokues[i] = new HashMap<>();
         }
-        for (int column = 0; column < 9; column++) {
+        for (int column = 0; column < 9; column++) { // fixme something wrong
             for (int row = 0; row < 9; row++) {
                 char c = board[column][row];
                 if (c != '.') {
