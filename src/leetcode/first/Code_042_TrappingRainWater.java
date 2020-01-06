@@ -29,6 +29,10 @@ public class Code_042_TrappingRainWater {
         return sum;
     }
 
+    /**
+     * 状态转移方程: maxLeft[i]是位于下标i左边墙的最高的墙(不包含自身) maxLeft[i] = max(maxLeft[i - 1], height[i - 1])
+     * maxRight[i]是位于下标i右边墙的最高墙
+     */
     static int trapV2(int[] height) {
         int res = 0;
         int len = height.length;
