@@ -10,7 +10,7 @@ public class Code_042_TrappingRainWater {
         int len = height.length;
         if (len == 0) return 0;
         int res = 0;
-        int[] leftHighest = new int[len];
+        int[] leftHighest = new int[len]; //todo:leftHighest rightHighest反了
         int[] rightHighest = new int[len];
         leftHighest[0] = height[0];
         rightHighest[len - 1] = height[len - 1];
