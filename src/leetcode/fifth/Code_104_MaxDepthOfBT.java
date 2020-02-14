@@ -13,6 +13,15 @@ public class Code_104_MaxDepthOfBT {
         else return Math.max(maxDepth(root.left) + 1, maxDepth(root.right) + 1);
     }
 
+    static int maxDepthV2(TreeNode root) {
+        return helper(root, 0);
+    }
+
+    static int helper(TreeNode root, int depth) {
+        if (root == null) return depth;
+        depth = Math.max(helper(root.right, depth + 1), helper(root.left, depth + 1));
+        return depth;
+    }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(2);
         root.left =  new TreeNode(1);
@@ -20,5 +29,6 @@ public class Code_104_MaxDepthOfBT {
         root.left.left = new TreeNode(1);
         root.left.left.left = new TreeNode(5);
         System.out.println(maxDepth(root));
+        System.out.println(maxDepthV2(root));
     }
 }
