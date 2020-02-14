@@ -40,7 +40,7 @@ public class Code_008_MyAtoi {
     }
 
     public static void main(String[] args) {
-        System.out.println(myAtoi("42"));
+        System.out.println(myAtoi("4"));
         System.out.println(myAtoi("+42"));
         System.out.println(myAtoi("      -42"));
         System.out.println(myAtoi("-42"));
