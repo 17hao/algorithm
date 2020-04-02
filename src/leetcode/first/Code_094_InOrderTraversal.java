@@ -5,7 +5,17 @@ import tool.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 二叉树的中序遍历
+ *
+ * @since 2019-10-1
+ * @update 2020-3-20
+ */
 public class Code_094_InOrderTraversal {
+
+    /**
+     * recursive
+     */
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new LinkedList<>();
         return process(root, result);
