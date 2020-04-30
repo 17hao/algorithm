@@ -24,7 +24,8 @@ public class Code_042_TrapRainWater {
     }
 
     /**
-     * 状态转换方程: left(1 - len-1): dp[i] = max(dp[i - 1], height[i - 1]) right(0 - len-2): dp[i] = max(dp[i + 1], height[i + 1])
+     * 状态转换方程: left(1 - len-1): dp[i] = max(dp[i - 1], height[i - 1])
+     *             right(0 - len-2): dp[i] = max(dp[i + 1], height[i + 1])
      * base case: dp[1] = height[0], dp[len - 2] = height[len - 1]
      */
     static int trapV2(int[] height) {
