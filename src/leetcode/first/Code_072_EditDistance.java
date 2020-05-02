@@ -3,7 +3,7 @@ package leetcode.first;
 /**
  * 编辑距离
  * <p>
- * dp[i][j]表示word1[i]转换成word2[j]需要的最小步骤
+ * dp[i][j]表示word1第i个之前的字符串转换成word2第j个之前的字符串需要的最小步骤,从第一个开始计数,0表示空字符串
  * 状态转移方程:
  * if (word1[i] == word2[j]) dp[i][j] = dp[i - 1][j - 1]
  * else dp[i][j] = min(dp[i - 1][j - 1](替换), dp[i - 1][j](删除), dp[i][j - 1](增加)) + 1
