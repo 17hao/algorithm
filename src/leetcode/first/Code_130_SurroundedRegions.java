@@ -3,9 +3,9 @@ package leetcode.first;
 import java.util.Arrays;
 
 /**
- * 被
+ * 被围绕的区域
  *
- * @since 2020-5-11 Monday 10:10
+ * @since 2020-5-11 Monday 10:10 - 10:34
  */
 public class Code_130_SurroundedRegions {
     void solve(char[][] board) {
