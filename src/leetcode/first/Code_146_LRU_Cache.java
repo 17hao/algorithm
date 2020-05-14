@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 实现一个LRU缓存, put()和get()在O(1)时间复杂度内完成
  *
- * @update 2020-5-13 09:30
+ * @update 2020-5-13 09:30 - 10:27
  * @since 2020-4-17 Friday 09:46
  */
 public class Code_146_LRU_Cache {
