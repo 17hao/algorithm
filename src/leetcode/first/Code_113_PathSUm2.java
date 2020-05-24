@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 路径总和2
  *
- * @since 2020-5-24 Sunday 19:59 - 20:23
+ * @since 2020-5-24 Sunday 19:59 - 21:00
  */
 public class Code_113_PathSUm2 {
     static List<List<Integer>> pathSum(TreeNode root, int sum) {
@@ -19,19 +19,37 @@ public class Code_113_PathSUm2 {
     }
 
     static void dfs(TreeNode node, int sum, List<List<Integer>> res, List<Integer> tmp) {
-        if (node == null && sum == 0 && !res.contains(tmp)) {
-            res.add(new ArrayList<>(tmp));
-            return;
-        }
+        List<Integer> list = new ArrayList<>(tmp);
         if (node == null) {
             return;
-        }
-        List<Integer> list = new ArrayList<>(tmp);
-        if ((sum - node.val) >= 0) {
+        } else if (node.left == null && node.right == null && (sum - node.val == 0)) {
             list.add(node.val);
-            dfs(node.left, sum - node.val, res, list);
-            dfs(node.right, sum - node.val, res, list);
+            res.add(list);
+            return;
         }
+        list.add(node.val);
+        dfs(node.left, sum - node.val, res, list);
+        dfs(node.right, sum - node.val, res, list);
+
+//        if (node == null && sum == 0 && !res.contains(tmp)) {
+//            res.add(new ArrayList<>(tmp));
+//            return;
+//        }
+//        if (node == null) {
+//            return;
+//        }
+//        List<Integer> list = new ArrayList<>(tmp);
+//        if ((sum - node.val) != 0) {
+//            list.add(node.val);
+//            if (node.left != null && node.right == null) {
+//                dfs(node.left, sum - node.val, res, list);
+//            } else if (node.right != null && node.left == null) {
+//                dfs(node.right, sum - node.val, res, list);
+//            } else {
+//                dfs(node.left, sum - node.val, res, list);
+//                dfs(node.right, sum - node.val, res, list);
+//            }
+//        }
     }
 
     public static void main(String[] args) {
@@ -46,5 +64,8 @@ public class Code_113_PathSUm2 {
         root.right.right.left = new TreeNode(5);
         root.right.right.right = new TreeNode(1);
         System.out.println(pathSum(root, 22));
+//        TreeNode root = new TreeNode(1);
+//        root.right = new TreeNode(2);
+//        System.out.println(pathSum(root, 1));
     }
 }
