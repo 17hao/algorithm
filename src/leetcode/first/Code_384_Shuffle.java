@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @since 2020-5-21 Thursday
  */
-public class Code_0384_Shuffle {
+public class Code_384_Shuffle {
     /**
      * Wrong!
      */
