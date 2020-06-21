@@ -26,7 +26,7 @@ public class Code_076_MinWindowSubstr {
                 }
             }
             right++;
-            while (count == target.length()) {
+            while (count == needs.size()) {
                 if ((right - left) < minLen) {
                     start = left;
                     end = right;
