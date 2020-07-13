@@ -1,6 +1,11 @@
 package leetcode.first;
 
-public class Code_137_SIngleNum2 {
+/**
+ * 只存在一个的数字、
+ * 
+ * @since 2002-7-11 Saturday
+ */
+public class Code_137_SingleNum2 {
     static int singleNumber(int[] nums) {
         int a = 0, b = 0;
         for (int n : nums) {
