@@ -1,5 +1,7 @@
 package misc;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -19,31 +21,26 @@ import java.util.Stack;
  */
 public class RPN {
     public static void main(String[] args) {
-        System.out.println(new Expression("1 + 2 - 3").toRPN());
-        System.out.println(new Expression("1 + 2 - 3 * 4").toRPN());
-        System.out.println(new Expression("1 * 2 - 3 + 4").toRPN());
-        System.out.println(new Expression("1 - (2 * (3 + 4))").toRPN());
-        System.out.println(new Expression("(4 + (13 / 5))").toRPN());
-        System.out.println(new Expression("((2 + 1) * 3)").toRPN());
+        System.out.println(Expression.infixToPostfix("1 + 2 - 3"));
+        System.out.println(Expression.infixToPostfix("1 + 2 - 3 * 4"));
+        System.out.println(Expression.infixToPostfix("1 * 2 - 3 + 4"));
+        System.out.println(Expression.infixToPostfix("1 - (2 * (3 + 4))"));
+        System.out.println(Expression.infixToPostfix("(4 + (13 / 5))"));
+        System.out.println(Expression.infixToPostfix("((2 + 1) * 3)"));
     }
 }
 
 class Expression {
-    private final String value;
-
-    Expression(String value) {
-        this.value = value;
-    }
-
-    public String toRPN() {
+    public static String infixToPostfix(String value) {
         Stack<Character> stack = new Stack<>();
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < value.length(); i++) {
-            if (value.charAt(i) == ' ') {
+            char c = value.charAt(i);
+            if (c == ' ') {
                 continue;
             }
-            int cur = 0;
-            if (Character.isDigit(value.charAt(i))) {
+            if (Character.isDigit(c)) {
+                int cur = 0;
                 while (i < value.length() && value.charAt(i) >= '0' && value.charAt(i) <= '9') {
                     cur = cur * 10 + value.charAt(i) - '0';
                     i++;
@@ -56,25 +53,25 @@ class Expression {
                 continue;
             }
             if (stack.isEmpty()) {
-                stack.push(value.charAt(i));
+                stack.push(c);
                 continue;
             }
-            if (value.charAt(i) == '(') {
-                stack.push(value.charAt(i));
+            if (c == '(') {
+                stack.push(c);
                 continue;
             }
-            if (value.charAt(i) == ')') {
+            if (c == ')') {
                 while (stack.peek() != '(') {
                     res.append(stack.pop() + " ");
                 }
                 stack.pop();
                 continue;
             }
-            if (hePrecedence(value.charAt(i), stack.peek())) {
-                stack.push(value.charAt(i));
+            if (hePrecedence(c, stack.peek())) {
+                stack.push(c);
             } else {
                 res.append(stack.pop() + " ");
-                stack.push(value.charAt(i));
+                stack.push(c);
             }
         }
         while (!stack.isEmpty()) {
@@ -86,20 +83,23 @@ class Expression {
     /**
      * higher or equal precedence
      */
-    private boolean hePrecedence(char a, char b) {
-        if (a != '(' && b == '(') {
+    private static boolean hePrecedence(char a, char b) {
+        List<Character> l1 = new ArrayList<>();
+        l1.add('*');
+        l1.add('/');
+        List<Character> l2 = new ArrayList<>();
+        l1.add('+');
+        l1.add('-');
+        if (b == '(') {
             return true;
         }
         if (a == b) {
             return true;
         }
-        if ((a == '*' || a == '/') && (b == '+' || b == '-')) {
+        if (l1.contains(a)) {
             return true;
         }
-        if ((a == '*' || a == '/') && (b == '*' || b == '/')) {
-            return true;
-        }
-        if ((a == '+' || a == '-') && (b == '+' || b == '-')) {
+        if (l2.contains(a) && l2.contains(b)) {
             return true;
         }
         return false;
