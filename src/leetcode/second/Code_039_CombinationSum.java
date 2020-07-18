@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @since 2020-4-19 Sunday 01:30
  */
-public class Code_39_CombinationSum {
+public class Code_039_CombinationSum {
     static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates); // 只有排序了才能保证跳过重复元素
