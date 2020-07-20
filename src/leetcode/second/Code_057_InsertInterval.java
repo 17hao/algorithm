@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 插入区间
  * 
- * @since 2020-7-20 Monday 18:22
+ * @since 2020-7-20 Monday 18:22 - 18:45
  */
 public class Code_057_InsertInterval {
     static int[][] insert(int[][] intervals, int[] newInterval) {
