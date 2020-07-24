@@ -13,7 +13,7 @@ import java.util.List;
 public class Code_102_LevelOrderBT {
     List<List<Integer>> result = new ArrayList<>();
 
-    List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         helper(root, 0);
         return result;
     }
