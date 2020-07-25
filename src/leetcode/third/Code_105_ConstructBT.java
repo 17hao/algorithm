@@ -1,7 +1,5 @@
 package leetcode.third;
 
-import java.util.Arrays;
-
 import leetcode.first.Code_102_LevelOrderBT;
 import tool.TreeNode;
 
@@ -15,7 +13,7 @@ public class Code_105_ConstructBT {
         if (preorder.length == 0) {
             return null;
         }
-        if (preorder.length == 1 && inorder.length == 1) {
+        if (preorder.length == 1) {
             return new TreeNode(preorder[0]);
         }
         TreeNode root = new TreeNode(preorder[0]);
