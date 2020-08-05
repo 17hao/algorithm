@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Reverse Polish Notation
+ * Reverse Polish Notation(Postfix Expresion)
  * Convert infix expression to postfix expression(Reverse Polish Notation)
  * 1 遇到数字直接加入到输出结果
  * 2 遇到加减乘除：
