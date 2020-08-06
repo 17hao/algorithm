@@ -1,4 +1,4 @@
-package misc;
+package misc.first;
 
 import java.util.Arrays;
 
