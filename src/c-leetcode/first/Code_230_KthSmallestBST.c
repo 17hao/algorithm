@@ -1,5 +1,4 @@
 #include "../TreeNode.h"
-#include "../TreeNode.c"
 #include <stdio.h>
 
 /* Kth smallest in BST
