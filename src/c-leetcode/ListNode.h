@@ -5,3 +5,5 @@ typedef struct ListNode
 } ListNode;
 
 ListNode *linkedlist();
+
+void printList(ListNode *head);
