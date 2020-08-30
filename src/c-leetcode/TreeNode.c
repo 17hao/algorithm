@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include "TreeNode.h"
 
+/* 
+        1
+       / \
+      2   3
+     / \
+    4   5
+*/
 TreeNode *binaryTree()
 {
     TreeNode *root, *n1, *n2, *n3, *n4;

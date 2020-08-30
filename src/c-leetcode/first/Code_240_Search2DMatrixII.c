@@ -1,5 +1,5 @@
 /* 
-   @since 2020-8-29 Saturday 11:01
+   @since 2020-8-29 Saturday 11:01 - 11:14
 */
 
 #include <stdbool.h>
@@ -31,8 +31,8 @@ int main(int argc, char const *argv[])
         (int[]){3, 6, 9, 16, 22},
         (int[]){10, 13, 14, 17, 24},
         (int[]){18, 21, 23, 26, 30}};
-    // printf("%d\n", searchMatrix(arr, 5, 5, 5));
-    // printf("%d\n", searchMatrix(arr, 5, 5, 20));
+    printf("%d\n", searchMatrix(arr, 5, 5, 5));
+    printf("%d\n", searchMatrix(arr, 5, 5, 20));
 
     int *b[1] = {(int[]) {5}};
     printf("%d\n", searchMatrix(b, 1, 1, 5));
