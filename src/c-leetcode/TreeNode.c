@@ -4,7 +4,7 @@
 /* 
         1
        / \
-      2   3
+      2   7
      / \
     4   5
 */
@@ -18,7 +18,7 @@ TreeNode *binaryTree()
     n4 = malloc(sizeof(TreeNode));
     root->val = 1;
     n1->val = 2;
-    n2->val = 3;
+    n2->val = 7;
     n3->val = 4;
     n4->val = 5;
     root->left = n1;
