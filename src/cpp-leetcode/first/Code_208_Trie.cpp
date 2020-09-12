@@ -59,9 +59,12 @@ class Trie {
 
 int main(int argc, char const *argv[]) {
     Trie *obj = new Trie();
-    obj->insert();
+	string str = "word";
+	string word = "word";
+	string prefix = "w";
+    obj->insert(str);
     bool b1 = obj->search(word);
     std::cout << b1 << std::endl;
     bool b2 = obj->startsWith(prefix);
-    std::cou << b2 << std::endl;
+    std::cout << b2 << std::endl;
 }
