@@ -5,7 +5,8 @@ using std::vector;
 
 /**
  * permutation
- *
+ * vector of distinct integer
+ * 
  * @since 2020-9-11 Friday 15:20 - 16:03
  */
 class Solution {
