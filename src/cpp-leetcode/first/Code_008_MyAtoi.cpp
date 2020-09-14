@@ -1,7 +1,5 @@
 #include <iostream>
 
-using std::string;
-
 /**
  * implement atoi
  *
@@ -9,7 +7,7 @@ using std::string;
  */
 class Solution {
    public:
-    int myAtoi(string str) {
+    int myAtoi(std::string str) {
         int max = 0x7fffffff;
         int min = 0x80000000;
         long res = 0;

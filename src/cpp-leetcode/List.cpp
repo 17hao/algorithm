@@ -1,15 +1,12 @@
-#include <stdlib.h>
-
+#include <cstdlib>
 #include <iostream>
 #include <vector>
 
 #include "ListNode.h"
 
-using std::vector;
-
 class List {
    public:
-    static ListNode *linkedList(vector<int> &vec) {
+    static ListNode *linkedList(std::vector<int> &vec) {
         ListNode *dummy = new ListNode{-1};
         ListNode *cur = dummy;
         for (int i : vec) {

@@ -1,6 +1,5 @@
-#include <stdbool.h>
-
 #include <algorithm>
+#include <cstdbool>
 #include <iostream>
 #include <vector>
 using std::vector;

@@ -1,9 +1,6 @@
-#include <stdbool.h>
-#include <stdlib.h>
-
+#include <cstdbool>
+#include <cstdlib>
 #include <iostream>
-
-using std::string;
 
 /**
  * trie
@@ -23,7 +20,7 @@ class Trie {
     }
 
     /** Inserts a word into the trie. */
-    void insert(string word) {
+    void insert(std::string word) {
         Trie *node = this;
         for (char c : word) {
             if (node->next[c - 'a'] == NULL) {
@@ -35,7 +32,7 @@ class Trie {
     }
 
     /** Returns if the word is in the trie. */
-    bool search(string word) {
+    bool search(std::string word) {
         Trie *node = this;
         for (char c : word) {
             node = node->next[c - 'a'];
@@ -46,7 +43,7 @@ class Trie {
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
-    bool startsWith(string prefix) {
+    bool startsWith(std::string prefix) {
         Trie *node = this;
         for (char c : prefix) {
             node = node->next[c - 'a'];
@@ -59,9 +56,9 @@ class Trie {
 
 int main(int argc, char const *argv[]) {
     Trie *obj = new Trie();
-	string str = "word";
-	string word = "word";
-	string prefix = "w";
+    std::string str = "word";
+    std::string word = "word";
+    std::string prefix = "w";
     obj->insert(str);
     bool b1 = obj->search(word);
     std::cout << b1 << std::endl;

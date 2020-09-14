@@ -1,5 +1,4 @@
-#include <stdbool.h>
-
+#include <cstdbool>
 #include <iostream>
 #include <vector>
 
@@ -20,7 +19,8 @@ class Solution {
    public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         vector<vector<int>> res;
-        if (intervals.size() == 0) return {};
+        if (intervals.size() == 0)
+            return {};
         std::sort(intervals.begin(), intervals.end(), compare);
         for (int i = 0; i < intervals.size(); i++) {
             int left, right;

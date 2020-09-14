@@ -1,5 +1,4 @@
-#include <stdbool.h>
-
+#include <cstdbool>
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -8,7 +7,7 @@ using std::vector;
 
 /**
  * course schedule
- * 
+ *
  * @since 2020-9-13 Sunday 21:20 - 21:54
  */
 class Solution {
