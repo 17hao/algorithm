@@ -1,5 +1,6 @@
 #include <cstdbool>
 #include <iostream>
+#include <vector>
 
 /**
  * union find algorithm
@@ -8,13 +9,12 @@
  */
 class UnionFind {
    private:
-    int *uf;
+    std::vector<int> uf;
 
    public:
     UnionFind(int size) {
-        uf = new int[size];
         for (int i = 0; i < size; i++) {
-            uf[i] = i;
+            uf.push_back(i);
         }
     }
 
@@ -26,11 +26,16 @@ class UnionFind {
 };
 
 int UnionFind::find(int x) {
-    if (uf[x] == x)
-        return x;
-    else {
-        return find(uf[x]);
+    // better way
+    if (uf[x] != x) {
+        uf[x] = find(uf[x]);
     }
+    return uf[x];
+    // if (uf[x] == x)
+    //     return x;
+    // else {
+    //     return find(uf[x]);
+    // }
 }
 
 bool UnionFind::connected(int x, int y) {
@@ -42,7 +47,7 @@ void UnionFind::unionSet(int x, int y) {
     if (xset == yset) {
         return;
     }
-    xset < yset ? uf[y] = xset : uf[x] = yset;
+    uf[xset] = yset;
 }
 
 int main(int argc, char const *argv[]) {
