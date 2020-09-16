@@ -65,12 +65,10 @@ class Solution {
 int main(int argc, char const* argv[]) {
     Solution s;
     vector<vector<int>> students1 = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
-    vector<vector<int>> students2 = {
-        {1, 0, 0, 1},  // 0-3
-        {0, 1, 1, 0},  // 1-2
-        {0, 1, 1, 1},  // 2-3
-        {1, 0, 1, 1}
-        };
+    vector<vector<int>> students2 = {{1, 0, 0, 1},  // 0-3
+                                     {0, 1, 1, 0},  // 1-2
+                                     {0, 1, 1, 1},  // 2-3
+                                     {1, 0, 1, 1}};
     std::cout << s.findCircleNum(students1) << std::endl;
     std::cout << s.findCircleNum(students2) << std::endl;
 }
