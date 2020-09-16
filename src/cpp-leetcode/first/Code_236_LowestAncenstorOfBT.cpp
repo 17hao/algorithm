@@ -1,5 +1,5 @@
 #include <cstdbool>
-#include <cstddef>
+#include <iostream>
 
 #include "../Tree.h"
 
@@ -11,7 +11,7 @@ class Solution {
         return true if (root == p || q) || root's left tree contains p || q
      */
     bool dfs(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (root == NULL) {
+        if (root == nullptr) {
             return false;
         }
         bool left = dfs(root->left, p, q);
@@ -25,8 +25,8 @@ class Solution {
 
    public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if (root == NULL) {
-            return NULL;
+        if (root == nullptr) {
+            return nullptr;
         }
         dfs(root, p, q);
         return res;

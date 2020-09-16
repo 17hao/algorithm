@@ -66,15 +66,11 @@ class Kruskal {
         }
     }
 
-    static bool compare(Edge e1, Edge e2) {
-        return e1.length < e2.length;
-    }
-
    public:
     /* minimum spanning tree */
     std::vector<Edge> MST(std::vector<std::vector<int>> adjacencyMatrix) {
         Kruskal::buildMembers(adjacencyMatrix);
-        std::sort(edges.begin(), edges.end(), compare);
+        std::sort(edges.begin(), edges.end(), [](Edge e1, Edge e2) { return e1.length < e2.length; });
         std::vector<Edge> res;
         for (Edge e : edges) {
             if (!uf->connected(e.src, e.dst)) {

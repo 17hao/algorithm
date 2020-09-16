@@ -1,7 +1,6 @@
-#include <cstddef>
 #include <vector>
 
-#include "List.cpp"
+#include "../List.h"
 
 using std::vector;
 
@@ -16,7 +15,7 @@ class Solution {
         ListNode *dummy = new ListNode{-1};
         ListNode *cur = dummy;
         int carry = 0;
-        while (h1 != NULL && h2 != NULL) {
+        while (h1 != nullptr && h2 != nullptr) {
             int sum = h1->val + h2->val + carry;
             carry = sum >= 10 ? 1 : 0;
             int value = sum % 10;
@@ -27,7 +26,7 @@ class Solution {
             h2 = h2->next;
         }
         if (carry > 0) {
-            while (h1 != NULL) {
+            while (h1 != nullptr) {
                 int sum = h1->val + carry;
                 carry = sum >= 10 ? 1 : 0;
                 int value = sum % 10;
@@ -36,7 +35,7 @@ class Solution {
                 cur = tmp;
                 h1 = h1->next;
             }
-            while (h2 != NULL) {
+            while (h2 != nullptr) {
                 int sum = h2->val + carry;
                 carry = sum >= 10 ? 1 : 0;
                 int value = sum % 10;
@@ -46,7 +45,7 @@ class Solution {
                 h2 = h2->next;
             }
         } else {
-            cur->next = h1 == NULL ? h2 : h1;
+            cur->next = h1 == nullptr ? h2 : h1;
         }
         if (carry > 0) {
             cur->next = new ListNode{1};

@@ -23,7 +23,7 @@ class Trie {
     void insert(std::string word) {
         Trie *node = this;
         for (char c : word) {
-            if (node->next[c - 'a'] == NULL) {
+            if (node->next[c - 'a'] == nullptr) {
                 node->next[c - 'a'] = new Trie();
             }
             node = node->next[c - 'a'];
@@ -36,7 +36,7 @@ class Trie {
         Trie *node = this;
         for (char c : word) {
             node = node->next[c - 'a'];
-            if (node == NULL)
+            if (node == nullptr)
                 return false;
         }
         return node->isEnd;
@@ -47,7 +47,7 @@ class Trie {
         Trie *node = this;
         for (char c : prefix) {
             node = node->next[c - 'a'];
-            if (node == NULL)
+            if (node == nullptr)
                 return false;
         }
         return true;

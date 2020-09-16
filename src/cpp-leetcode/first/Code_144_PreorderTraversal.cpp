@@ -12,7 +12,7 @@
 class Solution {
    public:
     std::vector<int> preorderTraversal(TreeNode* root) {
-        if (root == NULL)
+        if (root == nullptr)
             return {};
         std::vector<int> res;
         std::stack<TreeNode*> stack;
@@ -21,10 +21,10 @@ class Solution {
             TreeNode* cur = stack.top();
             stack.pop();
             res.push_back(cur->val);
-            if (cur->right != NULL) {
+            if (cur->right != nullptr) {
                 stack.push(cur->right);
             }
-            if (cur->left != NULL) {
+            if (cur->left != nullptr) {
                 stack.push(cur->left);
             }
         }
