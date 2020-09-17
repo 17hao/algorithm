@@ -16,6 +16,10 @@ ListNode *List::linkedList(std::vector<int> &vec) {
 }
 
 void List::printList(ListNode *head) {
+    if (head == nullptr) {
+        std::cout << "null list\n";
+        return;
+    }
     while (head->next != NULL) {
         std::cout << head->val << "->";
         head = head->next;
