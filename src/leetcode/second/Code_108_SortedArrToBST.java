@@ -1,6 +1,6 @@
 package leetcode.second;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 将有序数组转为高度平衡二叉搜索树(左右两个子树的高度差的绝对值不超过1)

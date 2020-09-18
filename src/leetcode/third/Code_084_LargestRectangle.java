@@ -1,7 +1,5 @@
 package leetcode.third;
 
-import java.util.Arrays;
-
 /**
  * 柱状图中的最大矩形
  *
@@ -10,7 +8,8 @@ import java.util.Arrays;
 public class Code_084_LargestRectangle {
     static int largestRectangleArea(int[] heights) {
         int len = heights.length;
-        if (len == 0) return 0;
+        if (len == 0)
+            return 0;
         int res = Integer.MIN_VALUE;
         for (int i = 0; i < len; i++) {
             int tmp = heights[i];
@@ -37,7 +36,8 @@ public class Code_084_LargestRectangle {
      */
     static int _largestRectangleArea(int[] heights) {
         int len = heights.length;
-        if (len == 0) return 0;
+        if (len == 0)
+            return 0;
         int[] left = new int[len], right = new int[len];
 
         for (int i = 0; i < len; i++) {
@@ -66,12 +66,12 @@ public class Code_084_LargestRectangle {
     }
 
     public static void main(String[] args) {
-        System.out.println(largestRectangleArea(new int[]{2, 1, 5, 6, 2, 3}));
-        System.out.println(largestRectangleArea(new int[]{2, 9, 5, 6, 2, 3}));
-        System.out.println(largestRectangleArea(new int[]{2, 9, 3, 6, 2, 3}));
+        System.out.println(largestRectangleArea(new int[] { 2, 1, 5, 6, 2, 3 }));
+        System.out.println(largestRectangleArea(new int[] { 2, 9, 5, 6, 2, 3 }));
+        System.out.println(largestRectangleArea(new int[] { 2, 9, 3, 6, 2, 3 }));
         System.out.println("===");
-        System.out.println(_largestRectangleArea(new int[]{2, 1, 5, 6, 2, 3}));
-        System.out.println(_largestRectangleArea(new int[]{2, 9, 5, 6, 2, 3}));
-        System.out.println(_largestRectangleArea(new int[]{2, 9, 3, 6, 2, 3}));
+        System.out.println(_largestRectangleArea(new int[] { 2, 1, 5, 6, 2, 3 }));
+        System.out.println(_largestRectangleArea(new int[] { 2, 9, 5, 6, 2, 3 }));
+        System.out.println(_largestRectangleArea(new int[] { 2, 9, 3, 6, 2, 3 }));
     }
 }

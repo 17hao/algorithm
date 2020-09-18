@@ -3,7 +3,7 @@ package leetcode.first;
 import java.util.ArrayList;
 import java.util.List;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 不同的二叉搜索树2

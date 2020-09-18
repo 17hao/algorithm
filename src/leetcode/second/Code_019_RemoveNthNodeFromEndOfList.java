@@ -1,7 +1,7 @@
 package leetcode.second;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 删除链表倒数第n个节点

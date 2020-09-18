@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 给定一个二叉树，原地将它展开为链表。

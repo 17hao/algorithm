@@ -1,7 +1,7 @@
 package leetcode.first;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 两两交换链表节点

@@ -1,6 +1,6 @@
 package leetcode.second;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 验证一棵树是否是BST

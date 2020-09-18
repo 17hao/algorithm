@@ -1,6 +1,6 @@
 package leetcode.fourth;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 将一个升序数组转换为一棵高度平衡二叉搜索树。

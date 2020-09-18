@@ -1,7 +1,7 @@
 package leetcode.second;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 编写一个程序，找到两个单链表相交的起始节点。

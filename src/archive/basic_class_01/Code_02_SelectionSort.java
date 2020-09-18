@@ -1,6 +1,6 @@
 package archive.basic_class_01;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 public class Code_02_SelectionSort {
     private static void selectionSort(int[] arr) {

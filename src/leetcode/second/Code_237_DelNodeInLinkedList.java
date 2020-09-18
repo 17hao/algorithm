@@ -1,6 +1,6 @@
 package leetcode.second;
 
-import tool.ListNode;
+import leetcode.tool.ListNode;
 
 /**
  * 删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。

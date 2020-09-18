@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 二叉树的最小深度

@@ -1,9 +1,9 @@
 package archive.basic_class_01;
 
-import tool.SortTestTool;
+import leetcode.tool.SortTestTool;
 
-import static tool.CommonTool.generateArray;
-import static tool.CommonTool.printArray;
+import static leetcode.tool.CommonTool.generateArray;
+import static leetcode.tool.CommonTool.printArray;
 
 public class Code_01_InsertionSort {
     /**

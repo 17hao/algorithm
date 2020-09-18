@@ -2,7 +2,6 @@ package leetcode.first;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * 简化unix路径
@@ -14,7 +13,8 @@ public class Code_071_SimplifyPath {
         Deque<String> stack = new LinkedList<>();
         for (String s : path.split("/")) {
             if (s.equals("..")) {
-                if (!stack.isEmpty()) stack.pop();
+                if (!stack.isEmpty())
+                    stack.pop();
             } else if (!s.equals(".") && !s.isEmpty()) {
                 stack.push(s);
             }

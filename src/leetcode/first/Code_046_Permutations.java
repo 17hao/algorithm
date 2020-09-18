@@ -20,6 +20,7 @@ public class Code_046_Permutations {
         return result;
     }
 
+    @Deprecated
     private void backtrack(int[] nums, boolean[] visited, int curSize,
                      int len, Stack<Integer> path, List<List<Integer>> result) {
         if (curSize == len) {

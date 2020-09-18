@@ -35,7 +35,8 @@ public class Code_020_ValidParenthesis {
         String s = "()";
         String s2 = "(])";
         String s3 = ")}";
-        boolean res = isValid(s2);
-        System.out.println(res);
+        System.out.println(isValid(s));
+        System.out.println(isValid(s2));
+        System.out.println(isValid(s3));
     }
 }

@@ -1,6 +1,6 @@
 package leetcode.second;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 二叉树最近公共节点

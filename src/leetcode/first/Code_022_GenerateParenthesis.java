@@ -10,8 +10,7 @@ import java.util.List;
 public class Code_022_GenerateParenthesis {
     public static void main(String[] args) {
         int n = 3;
-        List res = generateParenthesis(n);
-        System.out.println(res);
+        System.out.println(generateParenthesis(n));
     }
 
     private static List<String> generateParenthesis(int n) {

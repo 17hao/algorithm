@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 路径总和

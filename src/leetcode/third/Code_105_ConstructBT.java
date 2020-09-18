@@ -1,7 +1,7 @@
 package leetcode.third;
 
 import leetcode.first.Code_102_LevelOrderBT;
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 从前序遍历和中序遍历中构建二叉树 树中没有重复元素

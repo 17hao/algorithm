@@ -1,8 +1,8 @@
 package archive.basic_class_02;
 
-import tool.SortTestTool;
+import leetcode.tool.SortTestTool;
 
-import static tool.CommonTool.*;
+import static leetcode.tool.CommonTool.*;
 
 @SuppressWarnings("all")
 public class Code_01_QuickSort {

@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.Node;
+import leetcode.tool.Node;
 
 /**
  * 给定一个完美二叉树，填充它的每个 next 指针，

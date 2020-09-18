@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.ListNode;
+import leetcode.tool.ListNode;
 
 /**
  * 环形链表2

@@ -1,6 +1,6 @@
 package leetcode.fifth;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 验证二叉搜索树

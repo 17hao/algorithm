@@ -1,8 +1,8 @@
 package leetcode.first;
 
-import tool.CommonTool;
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.CommonTool;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 对链表进行插入排序

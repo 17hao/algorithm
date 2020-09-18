@@ -1,9 +1,9 @@
 package archive.basic_class_01;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
-import static tool.CommonTool.generateArray;
-import static tool.CommonTool.swap;
+import static leetcode.tool.CommonTool.generateArray;
+import static leetcode.tool.CommonTool.swap;
 
 public class Code_00_BubbleSort {
     private static void bubbleSort(int[] arr) {

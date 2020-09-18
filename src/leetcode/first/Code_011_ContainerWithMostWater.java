@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 public class Code_011_ContainerWithMostWater {
     /*

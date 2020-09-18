@@ -1,6 +1,6 @@
 package algorithms4th.chapter_2_Sorting.section_1_Elementary;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 public class Selection {
     private Selection() {

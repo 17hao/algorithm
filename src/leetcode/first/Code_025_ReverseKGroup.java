@@ -1,7 +1,7 @@
 package leetcode.first;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * k个一组翻转链表

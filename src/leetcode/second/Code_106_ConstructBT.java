@@ -1,7 +1,7 @@
 package leetcode.second;
 
 import leetcode.first.Code_102_LevelOrderBT;
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 从中序遍历和后序遍历构建二叉树

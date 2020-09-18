@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 /**
  * 排序后数组2个元素的最大间距

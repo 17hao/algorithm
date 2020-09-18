@@ -1,9 +1,6 @@
 package leetcode.weeklycompetition;
 
-import tool.ListNode;
-
-import java.util.ArrayList;
-import java.util.List;
+import leetcode.tool.ListNode;
 
 /**
  * 167场
@@ -26,7 +23,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-//        ListNode head = LinkedListTool.generateList(new int[]{1, 0, 1});
-//        System.out.println(getDecimalValue(head));
+        // ListNode head = LinkedListTool.generateList(new int[]{1, 0, 1});
+        // System.out.println(getDecimalValue(head));
     }
 }

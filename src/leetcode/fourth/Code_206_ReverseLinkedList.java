@@ -1,7 +1,7 @@
 package leetcode.fourth;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 反转链表

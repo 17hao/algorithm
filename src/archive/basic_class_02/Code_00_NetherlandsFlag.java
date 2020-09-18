@@ -1,6 +1,6 @@
 package archive.basic_class_02;
 
-import static tool.CommonTool.*;
+import static leetcode.tool.CommonTool.*;
 
 public class Code_00_NetherlandsFlag {
     /*

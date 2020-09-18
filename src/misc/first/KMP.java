@@ -1,7 +1,5 @@
 package misc.first;
 
-import java.util.Arrays;
-
 /**
  * KMP
  * 
@@ -59,9 +57,13 @@ public class KMP {
         System.out.println(getIndexOf("vscode insiders", "o")); // 3
         System.out.println(getIndexOf("ABAABACABABCopq", "ABACABABC")); // 3
         System.out.println(getIndexOf("abcdabcd8bcd", "abcd8bcd")); // 4
-        // System.out.println(Arrays.toString(getNextArray("abababca".toCharArray()))); // [-1, 0, 0, 1, 2, 3, 4, 0]
-        // System.out.println(Arrays.toString(getNextArray("abcd8bcd".toCharArray()))); // [-1, 0, 0, 0, 0, 0, 0, 0]
-        // System.out.println(Arrays.toString(getNextArray("ABCDABD".toCharArray()))); // [-1, 0, 0, 0, 0, 1, 2]
-        // System.out.println(Arrays.toString(getNextArray("ABACABABC".toCharArray()))); // [-1, 0, 0, 1, 0, 1, 2, 3, 2]
+        // System.out.println(Arrays.toString(getNextArray("abababca".toCharArray())));
+        // // [-1, 0, 0, 1, 2, 3, 4, 0]
+        // System.out.println(Arrays.toString(getNextArray("abcd8bcd".toCharArray())));
+        // // [-1, 0, 0, 0, 0, 0, 0, 0]
+        // System.out.println(Arrays.toString(getNextArray("ABCDABD".toCharArray())));
+        // // [-1, 0, 0, 0, 0, 1, 2]
+        // System.out.println(Arrays.toString(getNextArray("ABACABABC".toCharArray())));
+        // // [-1, 0, 0, 1, 0, 1, 2, 3, 2]
     }
 }

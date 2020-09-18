@@ -1,8 +1,8 @@
 package archive.basic_class_02;
 
-import tool.SortTestTool;
+import leetcode.tool.SortTestTool;
 
-import static tool.CommonTool.*;
+import static leetcode.tool.CommonTool.*;
 
 /*
 堆排序

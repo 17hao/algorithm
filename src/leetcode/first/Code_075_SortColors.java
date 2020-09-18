@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import static tool.CommonTool.*;
+import static leetcode.tool.CommonTool.*;
 
 /**
  * 荷兰旗问题

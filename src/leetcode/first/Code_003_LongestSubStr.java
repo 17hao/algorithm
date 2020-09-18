@@ -10,7 +10,8 @@ import java.util.Set;
  */
 public class Code_003_LongestSubStr {
     static int lengthOfLongestSubString(String s) {
-        if (s.length() == 0) return 0;
+        if (s.length() == 0)
+            return 0;
         Set<Character> set = new HashSet<>();
         int result = 0, i = 0, j = 0;
         while (i < s.length() && j < s.length()) {
@@ -30,5 +31,8 @@ public class Code_003_LongestSubStr {
         String s3 = "a";
         String s4 = "aaa";
         System.out.println(lengthOfLongestSubString(s1));
+        System.out.println(lengthOfLongestSubString(s2));
+        System.out.println(lengthOfLongestSubString(s3));
+        System.out.println(lengthOfLongestSubString(s4));
     }
 }

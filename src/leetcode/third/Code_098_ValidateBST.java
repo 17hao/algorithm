@@ -1,6 +1,6 @@
 package leetcode.third;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 验证是否是平衡二叉树

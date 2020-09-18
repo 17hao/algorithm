@@ -1,6 +1,6 @@
 package leetcode.second;
 
-import tool.Node;
+import leetcode.tool.Node;
 
 /**
  * 填充每个节点的右侧指针

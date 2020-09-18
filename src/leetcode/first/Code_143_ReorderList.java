@@ -2,8 +2,8 @@ package leetcode.first;
 
 import java.util.LinkedList;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 重排链表

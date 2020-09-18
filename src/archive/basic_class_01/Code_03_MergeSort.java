@@ -1,7 +1,7 @@
 package archive.basic_class_01;
 
-import tool.CommonTool;
-import tool.SortTestTool;
+import leetcode.tool.CommonTool;
+import leetcode.tool.SortTestTool;
 
 public class Code_03_MergeSort {
     private static void mergeSort(int[] arr, int l, int r) {

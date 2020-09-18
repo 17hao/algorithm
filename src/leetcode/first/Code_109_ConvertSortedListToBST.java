@@ -1,8 +1,8 @@
 package leetcode.first;
 
-import tool.LinkedListTool;
-import tool.ListNode;
-import tool.TreeNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 将有序链表转换成高度平衡的二叉搜索树
@@ -11,8 +11,10 @@ import tool.TreeNode;
  */
 public class Code_109_ConvertSortedListToBST {
     static TreeNode sortedListToBST(ListNode head) {
-        if (head == null) return null;
-        if (head.next == null) return new TreeNode(head.val);
+        if (head == null)
+            return null;
+        if (head.next == null)
+            return new TreeNode(head.val);
         ListNode pre = new ListNode(Integer.MIN_VALUE);
         pre.next = head;
         ListNode fast = pre.next, slow = pre.next;
@@ -29,10 +31,10 @@ public class Code_109_ConvertSortedListToBST {
     }
 
     public static void main(String[] args) {
-        ListNode head = LinkedListTool.generateList(new int[]{-10, -3, 0, 5, 9});
-        ListNode head2 = LinkedListTool.generateList(new int[]{-10, -3, 0, 5});
-        TreeNode root = sortedListToBST(head);
+        ListNode head = LinkedListTool.generateList(new int[] { -10, -3, 0, 5, 9 });
+        ListNode head2 = LinkedListTool.generateList(new int[] { -10, -3, 0, 5 });
         Code_102_LevelOrderBT c = new Code_102_LevelOrderBT();
-        System.out.println(c.levelOrder(root));
+        System.out.println(c.levelOrder(sortedListToBST(head)));
+        System.out.println(c.levelOrder(sortedListToBST(head2)));
     }
 }

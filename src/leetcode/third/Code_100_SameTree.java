@@ -1,6 +1,6 @@
 package leetcode.third;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 判断2棵二叉树是否相同

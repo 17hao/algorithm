@@ -1,6 +1,6 @@
 package leetcode.fifth;
 
-import tool.TreeNode;
+import leetcode.tool.TreeNode;
 
 /**
  * 二叉树最大深度

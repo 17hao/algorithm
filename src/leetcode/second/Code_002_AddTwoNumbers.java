@@ -1,7 +1,7 @@
 package leetcode.second;
 
-import tool.LinkedListTool;
-import tool.ListNode;
+import leetcode.tool.LinkedListTool;
+import leetcode.tool.ListNode;
 
 /**
  * 给出两个非空的链表用来表示两个非负的整数。

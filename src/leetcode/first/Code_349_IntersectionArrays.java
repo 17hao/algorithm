@@ -1,6 +1,6 @@
 package leetcode.first;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 import java.util.ArrayList;
 import java.util.HashSet;

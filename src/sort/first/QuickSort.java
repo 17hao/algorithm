@@ -1,8 +1,8 @@
-package misc.first;
+package sort.first;
 
 import java.util.Arrays;
 
-import tool.CommonTool;
+import leetcode.tool.CommonTool;
 
 /**
  * quick sort
