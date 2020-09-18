@@ -16,7 +16,9 @@ for i in $files; do
     ((n++))
     num=$(echo $i | cut -f 2 -d _)
     echo "leetcode [$num](${prefix}$i)&emsp;&emsp;" >> $readme
-    if ((n%3==0)); then
+    if ((n%6==0)); then
         echo "<br>" >> $readme
     fi
 done;
+
+echo "total: $n"
