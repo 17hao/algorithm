@@ -1,4 +1,4 @@
-package tool;
+package leetcode.tool;
 
 import java.util.Arrays;
 
