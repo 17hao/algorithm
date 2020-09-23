@@ -27,14 +27,16 @@ public class KMP {
 
     /**
      * 部分匹配数组（partial match table）
-     * m[i]的前缀子串（以m[0]开头且不包含m[i - 1]）和后缀子串（以m[i - 1]结尾且不包含m[0]）的最大交集长度
+     * m[i]的前缀子串（以m[0]开头且不包含m[i - 1]）和后缀子串（以m[i - 1]结尾且不包含m[0]）相等的最大长度
      * 
-     * res[0] = -1（只有后缀没有前缀）
-     * res[1] = 0（前缀和后缀都为空字符串）
-     * 记录当前位置下标i和m[i - 1]位置最大交集下一个字符下标cur
-     * if (arr[i - 1] == arr[cur]) res[i++] = ++res[i - 1]; else if (cur > 0) cur = res[cur]; else res[i++] = 0
+     * pmt[0] = -1（只有后缀没有前缀）
+     * pmt[1] = 0（前缀和后缀都为空字符串）
+     * 记录当前位置下标i和m[i - 1]位置最长匹配的前缀子串下一个下标next
+     * if (str[i - 1] == str[cur]) pmt[i++] = ++pmt[i - 1];
+     * elif (cur > 0) cur = pmt[cur];
+     * else pmt[i++] = 0
      */
-    static int[] getPmtArray(char[] str) {
+    private static int[] getPmtArray(char[] str) {
         if (str.length == 1) {
             return new int[] { -1 };
         }
