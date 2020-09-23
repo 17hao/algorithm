@@ -1,4 +1,4 @@
-package algorithms4th.chapter_2_Sorting.section_1_Elementary;
+package archive.algorithms4th.chapter_2_Sorting.section_1_Elementary;
 
 import leetcode.tool.CommonTool;
 
