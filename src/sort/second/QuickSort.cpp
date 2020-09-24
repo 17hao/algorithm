@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "../Tool.h"
+#include "../tool.h"
 
 /**
  * quick sort
