@@ -3,7 +3,7 @@
 /**
  * selection sort
  *
- * @since 2020-9-23 Thursday 10:15 - 10:24
+ * @since 2020-9-24 Thursday 10:15 - 10:24
  */
 class SelectionSort {
    private:
