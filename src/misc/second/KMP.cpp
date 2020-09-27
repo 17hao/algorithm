@@ -53,11 +53,11 @@ class KMP {
 
 int main(int argc, char const *argv[]) {
     KMP kmp;
-    std::string s1 = "abababcd";
+    std::string s1 = "abaababcd";
     std::string s2 = "qwerabc";
     std::string s3 = "zyx";
     std::string s4 = "abcxyz";
-    std::string m = "abc";
+    std::string m = "ababc";
     std::cout << kmp.findIndex(s1, m) << std::endl;
     std::cout << kmp.findIndex(s2, m) << std::endl;
     std::cout << kmp.findIndex(s3, m) << std::endl;
