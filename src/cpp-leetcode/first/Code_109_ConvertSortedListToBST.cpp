@@ -20,7 +20,7 @@ class Solution {
         ListNode* pre = new ListNode(-1);
         pre->next = head;
         ListNode *fast = head, *slow = head;
-        while (fast->next != nullptr && fast->next->next != nullptr) {
+        while (fast != nullptr && fast->next != nullptr) {
             fast = fast->next->next;
             slow = slow->next;
             pre = pre->next;
