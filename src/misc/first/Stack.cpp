@@ -50,6 +50,10 @@ class Stack {
     int size() {
         return s;
     }
+
+    bool empty() {
+        return s == 0;
+    }
 };
 
 class _Stack {
@@ -84,6 +88,10 @@ class _Stack {
 
     int size() {
         return s;
+    }
+
+    bool empty() {
+        return s == 0;
     }
 };
 
