@@ -5,7 +5,7 @@
 /**
  * flatten binary tree to list
  *
- * @since 2020-10-20 Tuesday 10:28
+ * @since 2020-10-20 Tuesday 10:28 - 11:00
  */
 class Solution {
    public:
