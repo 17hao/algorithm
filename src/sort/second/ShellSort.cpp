@@ -1,8 +1,10 @@
 #include <iostream>
 
+#include "../tool.h"
+
 /**
  * shell sort
- * 
+ *
  * @since 2020-10-12 Monday 14:46
  */
 class ShellSort {
@@ -24,7 +26,5 @@ class ShellSort {
 int main(int argc, char const* argv[]) {
     int arr[5] = {5, 1, 4, 10, 2};
     ShellSort::sort(arr, 5);
-    for (int i = 0; i < 5; i++) {
-        std::cout << arr[i] << " ";
-    }
+    printArr(arr, 5);
 }

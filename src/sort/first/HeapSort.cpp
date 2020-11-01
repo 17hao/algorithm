@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "../tool.h"
+
 /**
  * heap sort
  *
@@ -58,8 +60,6 @@ int main(int argc, char const* argv[]) {
     HeapSort s;
     int arr[5] = {6, 5, 4, 3, 2};
     s.sort(arr, 5);
-    for (int i = 0; i < 5; i++) {
-        std::cout << arr[i] << " ";
-    }
+    printArr(arr, 5);
     std::cout << "\n";
 }

@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "../tool.h"
+
 /**
  * selection sort
  *
@@ -33,9 +35,7 @@ int main(int argc, char const* argv[]) {
 
     int arr[7] = {3, 1, 2, 4, 1, 2, 4};
     s.sort(arr, 7);
-    for (int i = 0; i < 7; i++) {
-        std::cout << arr[i] << " ";
-    }
+    printArr(arr, 7);
     std::cout << "\n";
 
     /*
@@ -45,8 +45,7 @@ int main(int argc, char const* argv[]) {
     */
     int worst[7] = {7, 6, 5, 4, 3, 2, 1};  // worst performance
     s.sort(worst, 7);
-    for (int i = 0; i < 7; i++)
-        std::cout << worst[i] << " ";
+    printArr(arr, 7);
     std::cout << "\n";
 
     /*
@@ -56,7 +55,6 @@ int main(int argc, char const* argv[]) {
     */
     int best[7] = {1, 2, 3, 4, 5, 6, 7};
     s.sort(best, 7);
-    for (int i = 0; i < 7; i++)
-        std::cout << best[i] << " ";
+    printArr(arr, 7);
     std::cout << "\n";
 }

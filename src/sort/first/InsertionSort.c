@@ -12,6 +12,8 @@
 
 #include <stdio.h>
 
+#include "../tool.h"
+
 void swap(int *arr, int i, int j);
 
 void sort(int *arr, int size) {
@@ -34,8 +36,7 @@ void swap(int *arr, int i, int j) {
 int main(int argc, char const *argv[]) {
     int arr[7] = {3, 1, 2, 4, 1, 2, 5};
     sort(arr, 7);
-    for (int i = 0; i < 7; i++)
-        printf("%d ", arr[i]);
+    printArr(arr, 7);
     printf("\n");
 
     /*
@@ -45,8 +46,7 @@ int main(int argc, char const *argv[]) {
     */
     int worst[7] = {7, 6, 5, 4, 3, 2, 1};  // worst performance
     sort(worst, 7);
-    for (int i = 0; i < 7; i++)
-        printf("%d ", worst[i]);
+    printArr(worst, 7);
     printf("\n");
 
     /*
@@ -56,7 +56,6 @@ int main(int argc, char const *argv[]) {
     */
     int best[7] = {1, 2, 3, 4, 5, 6, 7};
     sort(best, 7);
-    for (int i = 0; i < 7; i++)
-        printf("%d ", best[i]);
+    printArr(best, 7);
     printf("\n");
 }
