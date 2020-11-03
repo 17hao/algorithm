@@ -5,6 +5,7 @@
 
 /**
  * prim's algorithm
+ * Prim算法和Kruskal算法都能找到MST，它们最大的区别在于Prim算法每次找的节点都能和当前子树相连，Kruskal算法找的节点可能和当前子树不相连
  *
  * @since 2020-10-9 Friday 17:10
  */
@@ -30,7 +31,7 @@ class Prim {
    public:
     void mst(int graph[V][V]) {
         int* parent = new int[V];  // 记录最小生成树中边的2个节点 i.e.从parent[i]到i
-        int* key = new int[V];     // 记录当前mst中节点到相邻节点的最小距离值
+        int* key = new int[V];  // 记录当前mst中节点到相邻节点的最小距离值（相邻节点可能访问过，也可能还没访问过）
         bool* marked = new bool[V];
         for (int i = 0; i < V; i++) {
             key[i] = MAX_INT;
@@ -38,9 +39,9 @@ class Prim {
         key[0] = 0;
         parent[0] = -1;
         /*
-         1. 找到距离当前mst中节点值最小的节点u
-         2.
-         和u相邻节点的距离如果小于key数组（key[i]表示当前mst节点到i节点的最小距离）中的值，则将key数组和parent数组更新
+        1. 找到距离当前mst子树中节点值最小的未访问节点u，此时u已经是mst中的一员
+        2. 接下来要找的是从u出发距离最小的未访问节点v，节点v可能成为mst中的节点
+        3. 和u相邻节点的距离如果小于key数组中的值，则将key数组和parent数组更新
         */
         for (int count = 0; count < V - 1; count++) {
             int u = minKey(key, marked);
@@ -48,25 +49,22 @@ class Prim {
             for (int v = 0; v < V; v++) {
                 if (graph[u][v] && !marked[v] && graph[u][v] < key[v]) {
                     parent[v] = u;
-                    std::cout << "parent: ";
-                    for (int i = 0; i < V; i++) {
-                        if (parent[i] == MAX_INT) {
-                            std::cout << "inf";
-                        } else {
-                            std::cout << parent[i] << " ";
-                        }
-                    }
-                    std::cout << std::endl;
                     key[v] = graph[u][v];
-                    std::cout << "key: ";
-                    for (int i = 0; i < V; i++) {
-                        if (key[i] == MAX_INT) {
-                            std::cout << "inf ";
-                        } else {
-                            std::cout << key[i] << " ";
-                        }
-                    }
-                    std::cout << std::endl;
+                    // std::cout << "parent: ";
+                    // for (int i = 0; i < V; i++) {
+                    //     std::cout << parent[i] << " ";
+                    // }
+                    // std::cout << std::endl;
+                    
+                    // std::cout << "key: ";
+                    // for (int i = 0; i < V; i++) {
+                    //     if (key[i] == MAX_INT) {
+                    //         std::cout << "inf ";
+                    //     } else {
+                    //         std::cout << key[i] << " ";
+                    //     }
+                    // }
+                    // std::cout << std::endl;
                 }
             }
         }
