@@ -5,11 +5,11 @@
 #define INF 9999
 
 /**
- * floyad-warshall algorithm
+ * floyd-warshall algorithm
  *
  * @since 2020-9-29 Tuesday 16:04 - 16:20
  */
-class FloyadWarshall {
+class FloydWarshall {
    public:
     void shortestPath(int dist[][L]) {
         int s = L;
@@ -42,7 +42,7 @@ int main(int argc, char const* argv[]) {
     };
     std::vector<std::vector<int>> dist = {
         {0, 1, 4, 6, 6}, {INF, 0, INF, 2, INF}, {INF, INF, 0, INF, 8}, {INF, 3, 7, 0, 9}, {INF, INF, INF, INF, 0}};
-    FloyadWarshall alg;
+    FloydWarshall alg;
     alg.shortestPath(graph);
     // for (auto x : dist) {
     //     for (int i : x) {
