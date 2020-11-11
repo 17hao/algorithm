@@ -19,10 +19,10 @@ class MergeSort {
         while (i < left && j < right) {
             arr[k++] = tmpL[i] < tmpR[j] ? tmpL[i++] : tmpR[j++];
         }
-        if (i < left) {
+        while (i < left) {
             arr[k++] = tmpL[i++];
         }
-        if (j < right) {
+        while (j < right) {
             arr[k++] = tmpR[j++];
         }
     }
@@ -45,6 +45,7 @@ class MergeSort {
 int main(int argc, char const* argv[]) {
     MergeSort s;
     int arr[7] = {3, 4, 1, 5, 1, 0, 19};
+    // int arr[7] = {4, 5, 2, 1, 56, 1, 0};
     s.sort(arr, 7);
     for (int i = 0; i < 7; i++) {
         std::cout << arr[i] << " ";
