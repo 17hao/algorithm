@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <stack>
+#include <vector>
 
 #include "../Tree.h"
 

@@ -6,13 +6,13 @@
  * @since 2020-10-13 Tuesday 13:48 - 14:08
  */
 class QuickSort {
-    void swap(int *arr, int i, int j) {
+    void swap(int* arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
 
-    void helper(int *arr, int left, int right) {
+    void helper(int* arr, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -35,12 +35,12 @@ class QuickSort {
     }
 
    public:
-    void sort(int *arr, int n) {
+    void sort(int* arr, int n) {
         helper(arr, 0, n - 1);
     }
 };
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int arr[7] = {5, 3, 4, 2, 1, 65, 2};
     QuickSort s;
     s.sort(arr, 7);
