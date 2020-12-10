@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../tool.h"
 
 /**
  * selection sort
@@ -26,7 +27,5 @@ void sort(int* arr, int len) {
 int main(int argc, char const* argv[]) {
     int arr[7] = {3, 1, 4, 1, 10, 2, 9};
     sort(arr, 7);
-    for (int i = 0; i < 7; i++) {
-        std::cout << arr[i] << " ";
-    }
+    printArr(arr, 7);
 }
