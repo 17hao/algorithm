@@ -42,6 +42,30 @@ int* shortestPath(int graph[SIZE][SIZE], int source) {
     return dist;
 }
 
+int shortestPath(int graph[SIZE][SIZE], int source, int destination) {
+    int* dist = new int[SIZE];
+    bool* visited = new bool[SIZE];
+    for (int i = 0; i < SIZE; i++) {
+        dist[i] = INT_MAX;
+        visited[i] = false;
+    }
+    dist[source] = 0;
+    for (int i = 0; i < SIZE; i++) {
+        int curNode = findMinDistNode(dist, visited);
+        visited[curNode] = true;
+        for (int j = 0; j < SIZE; j++) {
+            if (!visited[j] && dist[curNode] != INT_MAX && graph[curNode][j] != 0 &&
+                dist[curNode] + graph[curNode][j] < dist[j]) {
+                dist[j] = dist[curNode] + graph[curNode][j];
+            }
+        }
+        if (visited[destination]) {
+            break;
+        }
+    }
+    return dist[destination];
+}
+
 int main(int argc, char const* argv[]) {
     int graph[SIZE][SIZE] = {
         {0, 4, 0, 0, 0, 0, 0, 8, 0},  {4, 0, 8, 0, 0, 0, 0, 11, 0}, {0, 8, 0, 7, 0, 4, 0, 0, 2},
@@ -49,4 +73,9 @@ int main(int argc, char const* argv[]) {
         {0, 0, 0, 0, 0, 2, 0, 1, 6},  {8, 11, 0, 0, 0, 0, 1, 0, 7}, {0, 0, 2, 0, 0, 0, 6, 7, 0}};
     int* res = shortestPath(graph, 0);
     printNodeDistance(res, SIZE, 0);
+
+    std::cout << "===\n";
+    std::cout << "from 0 -> 1: " << shortestPath(graph, 0, 1) << "\n";
+    std::cout << "from 0 -> 3: " << shortestPath(graph, 0, 3) << "\n";
+    std::cout << "from 0 -> 5: " << shortestPath(graph, 0, 5) << "\n";
 }
