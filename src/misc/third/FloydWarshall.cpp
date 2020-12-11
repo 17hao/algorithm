@@ -5,6 +5,10 @@
 
 /**
  * Floyd-Warshall's algorithm
+ * 从几个维度去比较Floyd和Dijkstra算法的适用范围:
+ * 1. 有向图 or 无向图?
+ * 2. 稠密图 or 稀疏图?
+ * 3. 边的权重正 or 负?
  *
  * @since 2020-12-10 Thursday 19:12
  */
@@ -13,6 +17,9 @@ void shortestPath(int graph[SIZE][SIZE]) {
         for (int j = 0; j < SIZE; j++) {
             if (graph[i][j] == 0) {
                 graph[i][j] = INT_MAX;
+            }
+            if (i == j) {
+                graph[i][j] = 0;
             }
         }
     }
@@ -26,10 +33,6 @@ void shortestPath(int graph[SIZE][SIZE]) {
             }
         }
     }
-}
-
-void shortestPath(int graph[SIZE][SIZE], int source) {
-    
 }
 
 int main(int argc, char const *argv[]) {
