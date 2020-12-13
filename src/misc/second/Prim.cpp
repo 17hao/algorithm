@@ -39,7 +39,7 @@ void mst(int graph[SIZE][SIZE]) {
         int u = findMinNode(dist, marked);
         marked[u] = true;
         for (int v = 0; v < SIZE; v++) {
-            if (graph[u][v] && graph[u][v] < dist[v]) {
+            if (!marked[v] && graph[u][v] && graph[u][v] < dist[v]) {
                 parent[v] = u;
                 dist[v] = graph[u][v];
             }

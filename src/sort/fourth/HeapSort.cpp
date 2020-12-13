@@ -36,7 +36,7 @@ void siftDown(int* arr, int start, int end) {
 }
 
 void heapify(int* arr, int len) {
-    int start = len - 2;
+    int start = (len - 2) / 2;
     while (start >= 0) {
     	siftDown(arr, start--, len - 1);
     }
