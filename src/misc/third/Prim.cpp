@@ -23,7 +23,7 @@ class Prim {
     void printRes(int parent[SIZE], int dist[SIZE]) {
         std::cout << "source\tdestination\tdistance\n";
         for (int i = 1; i < SIZE; i++) {
-            std::cout << char(parent[i] + 'A') << "\t" << char(i + 'A') << "\t" << dist[i] << "\n";
+            std::cout << char(parent[i] + 'A') << "\t" << char(i + 'A') << "\t\t" << dist[i] << "\n";
         }
     }
 
