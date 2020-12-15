@@ -15,10 +15,10 @@ class HeapSort {
     }
 
     /**
-     * build max heap0.
+     * build max heap.
      */
     void heapify(int* arr, int count) {
-        int start = count - 1;
+        int start = (count - 2) / 2;
         while (start >= 0) {
             siftDown(arr, start--, count - 1);
         }

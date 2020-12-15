@@ -20,14 +20,14 @@ void sort(int* arr, int len) {
 }
 
 void heapify(int* arr, int len) {
+    // 一种heapify的典型错误
     // int start = 0, end = 0;
     // while (end < len) {
     //     siftDown(arr, start, end++);
     // }
-    int start = len - 1;
+    int start = (len - 2) / 2;
     while (start >= 0) {
         siftDown(arr, start--, len - 1);
-        // printArr(arr, 7);
     }
 }
 
