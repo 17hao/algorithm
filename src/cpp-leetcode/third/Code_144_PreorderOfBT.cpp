@@ -47,7 +47,7 @@ public:
 };
 
 int main(int argc, const char* argv[]) {
-    TreeNode* root = Tree::binaryTree();
+    TreeNode* root = Tree::binarySearchTree();
     Solution s;
     std::vector<int> res1 = s.preorderTraversalRecursively(root);
     std::vector<int> res2 = s.preorderTraversalIteratively(root);

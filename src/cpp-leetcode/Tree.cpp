@@ -9,7 +9,7 @@
     / \
    3   5
 */
-TreeNode* Tree::binaryTree() {
+TreeNode* Tree::binarySearchTree() {
     TreeNode* root = new TreeNode(6);
     root->left = new TreeNode(2);
     root->right = new TreeNode(13);

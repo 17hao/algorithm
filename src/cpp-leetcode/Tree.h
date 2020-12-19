@@ -10,5 +10,5 @@ struct TreeNode {
 
 class Tree {
    public:
-    static TreeNode *binaryTree();
+    static TreeNode *binarySearchTree();
 };
