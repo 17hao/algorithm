@@ -28,8 +28,9 @@ hs_err_pid*
 *.classpath
 .project
 *.iml
-bin/
+bin
 out
+build
 
 leetcode-solution
 
