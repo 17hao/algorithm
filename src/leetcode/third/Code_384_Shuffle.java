@@ -8,7 +8,7 @@ import java.util.Random;
  * 
  * @since 2020-7-8 Wednesday 19:15
  */
-public class Code_384_Shuufle {
+public class Code_384_Shuffle {
     public static void main(String[] args) {
         int[] nums = new int[] { 1, 2, 3, 4 };
         Solution s = new Solution(nums);
